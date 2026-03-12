@@ -1,0 +1,76 @@
+category,value,question,answer,image,answer_image,,,
+Fractions & Decimals,100,Write 5/8 as a decimal.,"Divide 5 ÷ 8.
+5 ÷ 8 = 0.625
+So the decimal form of 5/8 is 0.625.",fraction-bar-5-8.png,fraction-division-model-5-8.png,,,
+Fractions & Decimals,200,Find the sum: 2/3 + 1/6,5/6, so sqrt(25) is greatest.,expressions-comparison-diagram.png,evaluated-values-comparison-chart.png,,
+Fractions & Decimals,300,Solve the expression: 4/5 × 5/6 = ?,"Multiply numerators and denominators:
+4×5 = 20
+5×6 = 30
+20/30 simplifies to 2/3.",fraction-multiplication-area-model.png,fraction-simplification-20-30.png,,,
+Fractions & Decimals,400,A recipe uses 1 3/4 cups of sugar. You triple the recipe. How much sugar is needed?,"Convert to improper fraction:
+1 3/4 = 7/4
+Multiply 7/4 × 3 = 21/4
+21/4 = 5 1/4 cups.",mixed-number-recipe-diagram.png,mixed-number-multiplication-visual.png,,,
+Fractions & Decimals,500,A tank is 2/3 full. Then 1/6 of the tank capacity is added. How full is it now?,"Add fractions:
+2/3 = 4/6
+4/6 + 1/6 = 5/6
+The tank is now 5/6 full.",tank-fraction-fill-diagram.png,fraction-addition-tank-model.png,,,
+,,,,,,,,
+Ratios & Rates,100,Simplify the ratio 18:24,"Find the greatest common factor (6).
+18 ÷ 6 = 3
+24 ÷ 6 = 4
+Simplified ratio = 3:4",ratio-block-visual-18-24.png,ratio-simplification-diagram.png,,,
+Ratios & Rates,200,5 pencils cost $7.50. What is the unit price?,"Unit rate means price per 1 item.
+7.50 ÷ 5 = 1.50
+Each pencil costs $1.50",unit-rate-pencil-diagram.png,division-unit-rate-model.png,,,
+Ratios & Rates,300,A map scale is 1 cm = 8 km. How many km does 6 cm represent?,"Multiply using the scale:
+6 × 8 = 48 km.",map-scale-ruler-diagram.png,map-scale-multiplication-visual.png,,,
+Ratios & Rates,400,The ratio of cats to dogs is 4:3. There are 21 animals total. How many are cats?,"Total ratio parts = 7
+21 ÷ 7 = 3 per part.
+Cats = 4 × 3 = 12",ratio-groups-visual.png,ratio-scaling-groups.png,,,
+Ratios & Rates,500,A car travels 240 miles in 4 hours. What is the speed in miles per hour?,"Speed = distance ÷ time.
+240 ÷ 4 = 60 mph.",distance-rate-time-triangle.png,speed-calculation-diagram.png,,,
+,,,,,,,,
+Expressions & Equations,100,Evaluate 6 + 4 × 3.,"Order of operations:
+Multiply first → 4×3=12
+Then add → 6+12=18.",order-of-operations-example.png,order-of-operations-steps.png,,,
+Expressions & Equations,200,Solve x + 9 = 21.,"Subtract 9 from both sides:
+x = 21 − 9
+x = 12.",two-step-equation-balance-scale.png,solving-equation-balance-method.png,,,
+Expressions & Equations,300,Solve 4x = 32.,"Divide both sides by 4:
+x = 32 ÷ 4
+x = 8.",equation-division-balance.png,algebra-balance-solution.png,,,
+Expressions & Equations,400,Solve 3x + 4 = 19.,"Subtract 4:
+3x = 15
+Divide by 3:
+x = 5.",two-step-equation-balance.png,algebra-solving-steps-diagram.png,,,
+Expressions & Equations,500,Five times a number minus 7 equals 18. Find the number.,"Equation: 5x − 7 = 18
+Add 7 → 5x = 25
+Divide by 5 → x = 5.",word-problem-equation-model.png,equation-solving-flowchart.png,,,
+,,,,,,,,
+Geometry,100,Find the area of a rectangle with length 9 cm and width 4 cm.,"Area = length × width.
+9 × 4 = 36 cm².",rectangle-area-diagram.png,rectangle-area-formula-visual.png,,,
+Geometry,200,"Find the perimeter of a triangle with sides 8 cm, 9 cm, and 11 cm.","Perimeter = sum of sides.
+8 + 9 + 11 = 28 cm.",triangle-side-labels.png,triangle-perimeter-sum.png,,,
+Geometry,300,Find the area of a triangle with base 12 cm and height 5 cm.,"Area formula = ½ × base × height.
+½ × 12 × 5 = 30 cm².",triangle-base-height-diagram.png,triangle-area-formula-visual.png,,,
+Geometry,400,"A rectangular prism has length 6 cm,  width 4 cm,  and height 3 cm. Find the volume.","Volume = l × w × h.
+6 × 4 × 3 = 72 cm³.",G4Qvolume-multiplication-steps.png,G4volume-multiplication-steps.png,,,
+Geometry,500,Find the area of a trapezoid with bases 10 cm and 6 cm and height 4 cm.,"Area formula = ½(b1+b2)h
+½(10+6)×4
+½(16×4)=32 cm².",G5Qtrapezoid-area-formula-visual.png,G5Atrapezoid-area-formula-visual.png,,,
+,,,,,,,,
+Statistics & Data,100,"Find the mean of 3, 7, and 11","Mean = sum ÷ number of values.
+3+7+11 = 21
+21 ÷ 3 = 7.",,,,,
+Statistics & Data,200,"Find the median of 5, 9 ,11, and 14","Median = middle number.
+Since there are 4 numbers average the middle two:
+(9+11)/2 = 10.",,,,,
+Statistics & Data,300,"A data set includes 3, 6, 6, 7,  and 9. What is the mode?","Mode = value that appears most often.
+6 appears twice  more than the others.
+Mode = 6.",,,,,
+Statistics & Data,400,"A bar graph shows 15 red votes,  10 blue votes,  and 5 green votes. How many total votes are there?","Add all categories:
+15 + 10 + 5 = 30 votes.",,,,,
+Statistics & Data,500,The average of 4 numbers is 15. What is their total sum?,"Average = total ÷ number.
+Total = average × number
+15 × 4 = 60.",,,,,

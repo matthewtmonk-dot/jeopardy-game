@@ -1,0 +1,35 @@
+category,value,question,answer,image,answer_image
+Fractions & Decimals,100,Write 3/4 as a decimal.,0.75,,
+Fractions & Decimals,200,"5/8
+x^2
+sqrt(16)
+3/4 + 5/8",5/8 is greater.,,
+Fractions & Decimals,300," Solve The equation
+
+2/3 * 9/10 =",5-Mar,,
+Fractions & Decimals,400,A recipe uses 2 1/2 cups of flour. You double it. How much flour is needed?,5 cups,,
+Fractions & Decimals,500,A tank is 3/5 full. After adding 1/4 of the tank’s capacity how full is it?,17/20 full,,
+,,,,,
+Ratios & Rates,100,Simplify the ratio 12:18,2:03,,
+Ratios & Rates,200,4 notebooks cost $6. What is the unit price?,1.50 dollars per notebook,,
+Ratios & Rates,300,A map scale is 1 cm = 5 km. How many km does 7 cm represent?,35 km,map-scale-diagram.png,
+Ratios & Rates,400,"The ratio of boys to girls is 3:5. If there are 24 students total, how many are boys?",9 boys,,
+Ratios & Rates,500,A car travels 180 miles in 3 hours. What is the speed in miles per hour?,60 miles per hour,,
+,,,,,
+Expressions & Equations,100,Evaluate 4 + 3 × 2.,10,,
+Expressions & Equations,200,Solve x + 7 = 19.,x = 12,,
+Expressions & Equations,300,Solve 3x = 27.,x = 9,,
+Expressions & Equations,400,Solve 2x + 5 = 17.,x = 6,,
+Expressions & Equations,500,A number decreased by 8 equals 3 times the number minus 20. Find the number.,6,,
+,,,,,
+Geometry,100,Find the area of a rectangle with length 8 cm and width 5 cm.,40 cm^2,6th4-1.png,
+Geometry,200,"Find the perimeter of a triangle with sides 6 cm, 7 cm, and 9 cm.",22 cm,triangle-sides-labeled.png,
+Geometry,300,Find the area of a triangle with base 10 cm and height 6 cm.,30 cm^2,triangle-base-height.png,
+Geometry,400,"A rectangular prism has length 4 cm, width 3 cm, and height 5 cm. Find the volume.",60 cm^3,rectangular-prism-labeled.png,
+Geometry,500,Find the area of a trapezoid with bases 8 cm and 12 cm and height 5 cm.,50 cm^2,trapezoid-labeled.png,
+,,,,,
+Statistics & Data,100,"Find the mean of 4, 6, and 8.",6,,
+Statistics & Data,200,"Find the median of 3, 7, 9, and 10.",8,,
+Statistics & Data,300,"A data set includes 2, 4, 4, 5, and 6. What is the mode?",4,,
+Statistics & Data,400,"A bar graph shows 12 red votes, 8 blue votes, and 10 green votes. How many total votes are there?",30 votes,bar-graph-example.png,
+Statistics & Data,500,The average of 5 numbers is 12. What is the total of the 5 numbers?,60,,

@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jeopardy Game</title>
+  <link rel="stylesheet" href="css/styles.css">
+ 
+</head>
+
+<body>
+<div id="app">
+  <header>
+    <div class="titleWrap">
+      <h1 id="gameTitle">Jeopardy Review</h1>
+    </div>
+
+    <div class="topBarControls" aria-label="Primary game controls">
+      <button class="btn ghost settingsToggleBtn" id="settingsToggleBtn" type="button" aria-controls="headerControls" aria-expanded="false">
+        ⚙ Settings
+      </button>
+      <div class="pill compactBankPill" id="bankIndicator" title="Which question bank is active">Bank: Default</div>
+      <button class="btn ghost" id="fullscreenBtn" type="button">Fullscreen</button>
+      <button class="btn ghost" id="resetScoresBtn" title="Reset team scores (keeps used clues)">Reset Scores</button>
+      <button class="btn ghost" id="resetGameBtn" title="Reset everything (scores + used clues)">Reset Game</button>
+    </div>
+
+    <div class="topControls" id="headerControls" aria-label="Game setup controls">
+      <div class="drawerHead">
+        <strong>Settings</strong>
+        <button class="btn ghost" id="settingsCloseBtn" type="button" aria-label="Close settings">✕</button>
+      </div>
+      <div class="settingsPanelIntro">
+        Game setup controls live here so the board stays front and center during play.
+      </div>
+
+      <div class="settingsGrid">
+        <div class="pill">
+          <label for="teamCount">Teams</label>
+          <select id="teamCount">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3" selected>3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+        <div class="pill">
+          <label for="defaultTime">Default Time</label>
+          <input id="defaultTime" type="number" min="5" max="600" step="5" value="20" aria-label="Default clue timer seconds" />
+        </div>
+        <div class="pill builtInPickerPill">
+          <label for="builtInBankSelect">Choose a built-in game</label>
+          <select id="builtInBankSelect" aria-label="Choose a built-in game board">
+            <option value="">Default built-in board</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="settingsActions">
+        <button class="btn" id="loadBuiltInBankBtn" type="button">Load Built-in</button>
+        <button class="btn" id="loadBankBtn" type="button">Upload CSV From Device</button>
+        <button class="btn ghost" id="clearBankBtn" type="button" title="Remove saved CSV and go back to the built-in bank">Clear Loaded Bank</button>
+      </div>
+      <input id="bankFileInput" type="file" accept=".csv" hidden />
+    </div>
+  </header>
+
+  <main>
+    <section class="board" aria-label="Jeopardy Board">
+      <div class="boardHeader" id="boardHeader"></div>
+      <div class="grid" id="boardGrid"></div>
+    </section>
+
+    <aside class="scorePanel" id="scorePanel" aria-label="Scoreboard">
+      <div class="scoreHeader" id="scoreHeaderBar">
+        <h2>Scoreboard</h2>
+        <div class="hint">Select a team, then score</div>
+        <button class="btn ghost mini scoreToggleBtn" id="scoreToggleBtn" type="button" aria-expanded="true" aria-controls="scoreBody">▲</button>
+      </div>
+
+      <div class="scoreBody" id="scoreBody"></div>
+
+      <div class="foot">
+        <div>
+          Shortcuts: <span class="kbd">Esc</span> board • <span class="kbd">Space</span> answer
+        </div>
+        <div id="statusText">Ready</div>
+      </div>
+    </aside>
+  </main>
+</div>
+
+<div class="settingsBackdrop" id="settingsBackdrop" hidden></div>
+
+<!-- Modal -->
+<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-label="Clue">
+  <div class="modal">
+    <div class="modalTop">
+      <div class="meta">
+        <div class="line1" id="modalTitle">Category • $Value</div>
+        <div class="line2" id="modalMeta">Pick a team, then Correct/Incorrect</div>
+      </div>
+      <!-- MUSIC BAR (now centered in the top header row) -->
+  <div class="clue-musicbar clue-musicbar--header">
+    <button id="clueMusicToggle" type="button" aria-pressed="true">
+      Music: On
+    </button>
+
+    <label class="clue-musicvol">
+      Vol
+      <input id="clueMusicVol" type="range" min="0" max="1" step="0.01" value="0.35">
+    </label>
+  </div>
+      <button class="btn ghost" id="closeBtn">Back to Board (Esc)</button>
+    </div>
+
+    <div class="modalBody">
+      <div class="qBox">
+        <p class="qText" id="questionText">Question goes here</p>
+        <div class="imgWrap" id="imgWrap" style="display:none;">
+          <img id="clueImg" alt="Clue image" />
+        </div>
+
+        <div class="answer" id="answerBox">
+          <p class="answerTitle">Answer</p>
+          <p class="aText" id="answerText">Answer goes here</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="modalActions">
+      <div class="leftActions">
+        <button class="btn primary" id="toggleAnswerBtn">Show Answer (Space)</button>
+        <button class="btn ghost" id="markUsedBtn">Mark Used</button>
+      </div>
+      <div class="midActions" style="display:flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content:center;">
+  <div class="pill" title="Question timer">
+    <label for="modalTimerStartStopBtn">Timer</label>
+    <button class="btn mini" id="modalTimerMinusBtn" type="button">-10</button>
+    <button class="btn mini" id="modalTimerStartStopBtn" type="button">START</button>
+    <button class="btn mini" id="modalTimerPlusBtn" type="button">+10</button>
+
+    <span id="modalTimerDisplay" style="min-width:84px; text-align:center; font-weight:950;">
+      0:00
+    </span>
+  </div>
+</div>
+      <div class="rightActions">
+        <button class="btn good" id="correctBtn">Correct (+$)</button>
+        <button class="btn bad" id="incorrectBtn">Incorrect (-$)</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MathJax configuration -->
+<script>
+  window.MathJax = {
+    tex: { inlineMath: [['\\(','\\)'], ['$', '$']] }
+  };
+</script>
+
+<!-- MathJax library -->
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+<!-- Your math helper -->
+<script src="js/math-render.js" defer></script>
+
+<!-- Your main game -->
+<script src="js/app.js" defer></script>
+<!-- Background Jeopardy music (loop) -->
+<audio id="jeopardyLoop" preload="auto" loop>
+  <source src="assets/audio/jeopardyLoop.mp3" type="audio/mpeg">
+</audio>
+</body>
+</html>
