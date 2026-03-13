@@ -1,5 +1,14 @@
 [
+  { "label": "6th Grade Easy", "path": "./csv/6th-grade-easy.csv" },
   { "label": "6th Grade Review", "path": "./csv/6th-grade-review.csv" },
+
+  { "label": "7th Grade Easy", "path": "./csv/7th-grade-easy.csv" },
   { "label": "7th Grade Review", "path": "./csv/7th-grade-review.csv" },
-  { "label": "8th Grade Review", "path": "./csv/8th-grade-review.csv" }
+
+  { "label": "8th Grade Easy", "path": "./csv/8th-grade-easy.csv" },
+  { "label": "8th Grade Review", "path": "./csv/8th-grade-review.csv" },
+
+  { "label": "Algebra Prep", "path": "./csv/algebra-prep.csv" },
+
+  { "label": "Mixed Review Grades 6–8", "path": "./csv/mixed-reviewjeopardy-grades_6-8.csv" }
 ]

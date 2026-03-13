@@ -18,8 +18,8 @@ function plainToTeX(expr) {
   // sqrt(...) -> \sqrt{...}
   s = s.replace(/sqrt\s*\(([^()]*)\)/gi, (_, inside) => `\\sqrt{${plainToTeX(inside)}}`);
 
-  // x^2 -> x^{2}
-  s = s.replace(/\^(\-?\d+|\w+)/g, "^{$1}");
+  // x^2, 3^2, x ^ 2 -> x^{2}
+  s = s.replace(/\^\s*(\-?\d+|\w+)/g, "^{$1}");
 
   // a/b -> \frac{a}{b} (avoid a/b/c and URLs)
   if (!/\bhttps?:\/\//i.test(s)) {
@@ -59,7 +59,7 @@ function renderMathText(raw) {
   // Match "math-ish" segments inside normal sentences.
   // This intentionally grabs multi-token expressions like: "3/4 + 5/8", "x^2", "sqrt(16)"
   const MATH_RE =
-    /(sqrt\s*\([^)]*\)|\bpi\b|(?:\b\d+(?:\.\d+)?\s*\/\s*\d+(?:\.\d+)?\b(?:\s*[\+\-\*]\s*\b\d+(?:\.\d+)?\s*\/\s*\d+(?:\.\d+)?\b)+)|\b\d+(?:\.\d+)?\s*\/\s*\d+(?:\.\d+)?\b|\b[a-zA-Z]\w*\s*\^\s*-?(?:\d+|\w+)\b|\b\d+(?:\.\d+)?\b\s*[\+\-\*]\s*\b\d+(?:\.\d+)?\b)/gi;
+    /(sqrt\s*\([^)]*\)|\bpi\b|(?:\b\d+(?:\.\d+)?\s*\/\s*\d+(?:\.\d+)?\b(?:\s*[\+\-\*]\s*\b\d+(?:\.\d+)?\s*\/\s*\d+(?:\.\d+)?\b)+)|\b\d+(?:\.\d+)?\s*\/\s*\d+(?:\.\d+)?\b|(?:\b\d+(?:\.\d+)?\b|\b[a-zA-Z]\w*\b|\([^)]*\))\s*\^\s*-?(?:\d+|\w+)\b|\b\d+(?:\.\d+)?\b\s*[\+\-\*]\s*\b\d+(?:\.\d+)?\b)/gi;
 
   // Replace only the matched segments with MathJax inline delimiters
   return safe.replace(MATH_RE, (match) => `\\(${plainToTeX(match)}\\)`);

@@ -1,0 +1,201 @@
+category,value,question,answer,image,answer_image,,,
+Linear Equations,100,"Solve x + 8 = 19","Subtract 8 from both sides.
+
+x = 19 − 8
+
+x = 11
+
+The solution is x = 11.",,,,
+Linear Equations,200,"Solve 4x = 32","Divide both sides by 4.
+
+x = 32 ÷ 4
+
+x = 8
+
+The solution is x = 8.",,,,
+Linear Equations,300,"Solve 3x + 5 = 20","Subtract 5 from both sides.
+
+3x = 15
+
+Divide by 3.
+
+x = 5
+
+The solution is x = 5.",,,,
+Linear Equations,400,"Solve 2x − 6 = 10","Add 6 to both sides.
+
+2x = 16
+
+Divide by 2.
+
+x = 8
+
+The solution is x = 8.",,,,
+Linear Equations,500,"The sum of twice a number and 4 equals 18. Find the number","Let the number be x.
+
+2x + 4 = 18
+
+Subtract 4.
+
+2x = 14
+
+Divide by 2.
+
+x = 7
+
+The number is 7.",,,,
+,,,,,,,,
+Proportional Relationships and Slope,100,"Find the unit rate if 18 miles are traveled in 3 hours","Unit rate means per one hour.
+
+18 ÷ 3 = 6
+
+The unit rate is 6 miles per hour.",,,,
+Proportional Relationships and Slope,200,"Determine if the table represents a proportional relationship.
+
+x: 2 4 6
+y: 6 12 18","Check the ratio y ÷ x.
+
+6 ÷ 2 = 3
+12 ÷ 4 = 3
+18 ÷ 6 = 3
+
+The ratio is constant so the relationship is proportional.",,,,
+Proportional Relationships and Slope,300,"Find the slope of a line through (2 3) and (5 9)","Slope equals change in y divided by change in x.
+
+9 − 3 = 6
+5 − 2 = 3
+
+Slope = 6 ÷ 3
+
+Slope = 2.",,,,
+Proportional Relationships and Slope,400,"Find the slope of a line through (1 4) and (4 10)","Slope equals change in y divided by change in x.
+
+10 − 4 = 6
+4 − 1 = 3
+
+Slope = 6 ÷ 3
+
+Slope = 2.",,,,
+Proportional Relationships and Slope,500,"A line passes through the origin and the point (4 12). What is the slope","Slope equals change in y divided by change in x.
+
+12 − 0 = 12
+4 − 0 = 4
+
+Slope = 12 ÷ 4
+
+Slope = 3.",,,,
+,,,,,,,,
+Exponents,100,"Evaluate 2^4","2^4 means 2 multiplied by itself four times.
+
+2 × 2 × 2 × 2 = 16
+
+The value is 16.",,,,
+Exponents,200,"Evaluate 3^3","3^3 means 3 × 3 × 3.
+
+3 × 3 × 3 = 27
+
+The value is 27.",,,,
+Exponents,300,"Evaluate 5^2 × 2","First find the exponent.
+
+5^2 = 25
+
+Multiply.
+
+25 × 2 = 50
+
+The value is 50.",,,,
+Exponents,400,"Evaluate (2^3)^2","Use the power of a power rule.
+
+(2^3)^2 = 2^6
+
+2^6 = 64
+
+The value is 64.",,,,
+Exponents,500,"Evaluate 2^3 × 2^4","When multiplying powers with the same base add the exponents.
+
+2^3 × 2^4 = 2^7
+
+2^7 = 128
+
+The value is 128.",,,,
+,,,,,,,,
+Geometry and Pythagorean Ideas,100,"Find the area of a rectangle with length 11 and width 7","Area equals length times width.
+
+11 × 7 = 77
+
+The area is 77 square units.",,,,
+Geometry and Pythagorean Ideas,200,"Find the volume of a rectangular prism with length 6 width 4 and height 5","Volume equals length × width × height.
+
+6 × 4 × 5 = 120
+
+The volume is 120 cubic units.",,,,
+Geometry and Pythagorean Ideas,300,"Find the hypotenuse of a right triangle with legs 3 and 4","Use the Pythagorean theorem.
+
+3^2 + 4^2 = 9 + 16 = 25
+
+Square root of 25 is 5
+
+The hypotenuse is 5.",,,,
+Geometry and Pythagorean Ideas,400,"Find the distance between (1 1) and (4 5)","Find horizontal and vertical change.
+
+4 − 1 = 3
+5 − 1 = 4
+
+Use the Pythagorean theorem.
+
+3^2 + 4^2 = 25
+
+Square root of 25 is 5
+
+The distance is 5.",,,,
+Geometry and Pythagorean Ideas,500,"A ladder 10 feet long leans against a wall. The bottom is 6 feet from the wall. How high does the ladder reach","Use the Pythagorean theorem.
+
+6^2 + h^2 = 10^2
+
+36 + h^2 = 100
+
+Subtract 36.
+
+h^2 = 64
+
+Square root of 64 is 8
+
+The ladder reaches 8 feet.",,,,
+,,,,,,,,
+Systems Basics,100,"If y = x + 2 and x = 5 find y","Substitute x = 5.
+
+y = 5 + 2
+
+y = 7
+
+The solution is (5 7).",,,,
+Systems Basics,200,"If x + y = 12 and x = 7 find y","Substitute x = 7.
+
+7 + y = 12
+
+Subtract 7.
+
+y = 5
+
+The solution is (7 5).",,,,
+Systems Basics,300,"Solve the system y = x + 3 and x = 4","Substitute x into the equation.
+
+y = 4 + 3
+
+y = 7
+
+The solution is (4 7).",,,,
+Systems Basics,400,"Solve the system y = 2x and x = 6","Substitute x into the equation.
+
+y = 2 × 6
+
+y = 12
+
+The solution is (6 12).",,,,
+Systems Basics,500,"Solve the system y = x + 5 and x = 3","Substitute x into the equation.
+
+y = 3 + 5
+
+y = 8
+
+The solution is (3 8).",,,,

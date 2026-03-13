@@ -1,0 +1,193 @@
+category,value,question,answer,image,answer_image,,,
+Ratios and Unit Rates,100,"Simplify the ratio 15 to 20","Find the greatest common factor.
+
+The GCF of 15 and 20 is 5.
+
+15 ÷ 5 = 3
+20 ÷ 5 = 4
+
+The simplified ratio is 3 to 4.",,,,
+Ratios and Unit Rates,200,"4 notebooks cost 12 dollars. What is the unit price","Divide total cost by number of notebooks.
+
+12 ÷ 4 = 3
+
+Each notebook costs 3 dollars.",,,,
+Ratios and Unit Rates,300,"A car travels 150 miles in 3 hours. Find the unit rate in miles per hour","Unit rate means per one hour.
+
+150 ÷ 3 = 50
+
+The car travels 50 miles per hour.",,,,
+Ratios and Unit Rates,400,"A recipe uses 2 cups of sugar for 5 batches. How many cups are needed for 15 batches","First find cups per batch.
+
+2 ÷ 5 = 0.4
+
+Multiply by 15 batches.
+
+15 × 0.4 = 6
+
+You need 6 cups of sugar.",,,,
+Ratios and Unit Rates,500,"A map scale shows 1 centimeter represents 7 kilometers. Two towns are 8 centimeters apart on the map. Find the real distance","Use the scale relationship.
+
+1 centimeter represents 7 kilometers.
+
+8 × 7 = 56
+
+The real distance is 56 kilometers.",,,,
+,,,,,,,,
+Percent Basics,100,"Find 25 percent of 40","Convert percent to decimal.
+
+25 percent = 0.25
+
+Multiply.
+
+0.25 × 40 = 10
+
+The answer is 10.",,,,
+Percent Basics,200,"Find 10 percent of 90","10 percent means one tenth.
+
+90 ÷ 10 = 9
+
+The answer is 9.",,,,
+Percent Basics,300,"A shirt costs 50 dollars and is discounted by 20 percent. How much is the discount","Find 20 percent of 50.
+
+0.20 × 50 = 10
+
+The discount is 10 dollars.",,,,
+Percent Basics,400,"After a 20 percent discount on a 50 dollar shirt what is the sale price","Find the discount.
+
+20 percent of 50 = 10
+
+Subtract from the original price.
+
+50 − 10 = 40
+
+The sale price is 40 dollars.",,,,
+Percent Basics,500,"A price increases from 40 dollars to 48 dollars. Find the percent increase","Find the increase.
+
+48 − 40 = 8
+
+Divide by the original value.
+
+8 ÷ 40 = 0.2
+
+Convert to percent.
+
+0.2 = 20 percent
+
+The percent increase is 20 percent.",,,,
+,,,,,,,,
+Expressions and Equations,100,"Evaluate 7 + 5 × 4","Multiply first.
+
+5 × 4 = 20
+
+Add.
+
+7 + 20 = 27
+
+The value is 27.",,,,
+Expressions and Equations,200,"Solve x + 6 = 15","Subtract 6 from both sides.
+
+x = 15 − 6
+
+x = 9
+
+The solution is x = 9.",,,,
+Expressions and Equations,300,"Solve 4x = 28","Divide both sides by 4.
+
+x = 28 ÷ 4
+
+x = 7
+
+The solution is x = 7.",,,,
+Expressions and Equations,400,"Solve 3x + 4 = 19","Subtract 4 from both sides.
+
+3x = 15
+
+Divide by 3.
+
+x = 5
+
+The solution is x = 5.",,,,
+Expressions and Equations,500,"Three times a number plus 5 equals 23. Find the number","Let the number be x.
+
+3x + 5 = 23
+
+Subtract 5.
+
+3x = 18
+
+Divide by 3.
+
+x = 6
+
+The number is 6.",,,,
+,,,,,,,,
+Geometry and Area,100,"Find the area of a rectangle with length 10 and width 6","Area equals length times width.
+
+10 × 6 = 60
+
+The area is 60 square units.",,,,
+Geometry and Area,200,"Find the perimeter of a rectangle with length 11 and width 4","Perimeter equals the sum of all sides.
+
+2 × 11 + 2 × 4
+
+22 + 8 = 30
+
+The perimeter is 30.",,,,
+Geometry and Area,300,"Find the area of a triangle with base 12 and height 6","Use the triangle area formula.
+
+Area = one half × base × height
+
+0.5 × 12 × 6 = 36
+
+The area is 36 square units.",,,,
+Geometry and Area,400,"A rectangular prism has length 6 width 5 and height 4. Find the volume","Volume equals length × width × height.
+
+6 × 5 × 4 = 120
+
+The volume is 120 cubic units.",,,,
+Geometry and Area,500,"A rectangular prism has base area 30 square units and height 4 units. Find the volume","Volume equals base area times height.
+
+30 × 4 = 120
+
+The volume is 120 cubic units.",,,,
+,,,,,,,,
+Probability,100,"A bag contains 3 red marbles and 7 blue marbles. What is the probability of selecting a red marble","Total marbles = 3 + 7 = 10
+
+Probability = favorable outcomes divided by total outcomes.
+
+3 ÷ 10
+
+The probability is 3/10.",,,,
+Probability,200,"A number is chosen from 1 through 6. What is the probability of choosing an even number","Even numbers are 2 4 6.
+
+There are 3 favorable outcomes out of 6.
+
+3 ÷ 6 = 1/2
+
+The probability is 1/2.",,,,
+Probability,300,"A spinner has 4 equal sections labeled A B C and D. What is the probability of landing on B","There are 4 equal outcomes.
+
+One outcome is B.
+
+Probability = 1 ÷ 4
+
+The probability is 1/4.",,,,
+Probability,400,"A bag has 4 green 3 yellow and 5 blue marbles. What is the probability of choosing yellow","Total marbles = 4 + 3 + 5 = 12
+
+Yellow marbles = 3
+
+Probability = 3 ÷ 12
+
+Simplify.
+
+1/4
+
+The probability is 1/4.",,,,
+Probability,500,"Two fair coins are flipped. What is the probability of getting two heads","Possible outcomes are HH HT TH TT.
+
+Two heads occurs once.
+
+1 outcome out of 4.
+
+Probability = 1/4.",,,,

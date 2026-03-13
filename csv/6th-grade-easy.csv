@@ -1,0 +1,202 @@
+category,value,question,answer,image,answer_image,,,
+Fractions,100,"Compute 1/2 + 1/4","Convert to a common denominator.
+
+1/2 = 2/4
+
+2/4 + 1/4 = 3/4
+
+The sum is 3/4.",,,,
+Fractions,200,"Compute 3/4 − 1/4","The denominators are the same.
+
+Subtract the numerators.
+
+3/4 − 1/4 = 2/4
+
+Simplify.
+
+2/4 = 1/2
+
+The answer is 1/2.",,,,
+Fractions,300,"Compute 2/3 + 1/6","Find a common denominator.
+
+2/3 = 4/6
+
+4/6 + 1/6 = 5/6
+
+The answer is 5/6.",,,,
+Fractions,400,"Multiply 2/3 × 3/5","Multiply the numerators and denominators.
+
+2 × 3 = 6
+3 × 5 = 15
+
+6/15 simplifies.
+
+Divide by 3.
+
+2/5
+
+The answer is 2/5.",,,,
+Fractions,500,"Compute 1 1/2 + 2 3/4","Add the whole numbers first.
+
+1 + 2 = 3
+
+Add the fractions.
+
+1/2 = 2/4
+
+2/4 + 3/4 = 5/4
+
+5/4 = 1 1/4
+
+Add to the whole numbers.
+
+3 + 1 1/4 = 4 1/4
+
+The sum is 4 1/4.",,,,
+,,,,,,,,
+Multiplication and Division,100,"Compute 8 × 7","Multiply.
+
+8 × 7 = 56
+
+The answer is 56.",,,,
+Multiplication and Division,200,"Compute 63 ÷ 9","Divide.
+
+63 ÷ 9 = 7
+
+The answer is 7.",,,,
+Multiplication and Division,300,"Compute 24 × 6","Multiply.
+
+24 × 6 = 144
+
+The answer is 144.",,,,
+Multiplication and Division,400,"Compute 144 ÷ 12","Divide.
+
+144 ÷ 12 = 12
+
+The answer is 12.",,,,
+Multiplication and Division,500,"A box holds 8 pencils. How many pencils are in 15 boxes","Multiply.
+
+15 × 8 = 120
+
+There are 120 pencils.",,,,
+,,,,,,,,
+Order of Operations,100,"Evaluate 6 + 4 × 5","Multiply first.
+
+4 × 5 = 20
+
+Add.
+
+6 + 20 = 26
+
+The value is 26.",,,,
+Order of Operations,200,"Evaluate 20 − 3 × 4","Multiply first.
+
+3 × 4 = 12
+
+Subtract.
+
+20 − 12 = 8
+
+The value is 8.",,,,
+Order of Operations,300,"Evaluate (8 + 7) × 3","Evaluate the parentheses.
+
+8 + 7 = 15
+
+Multiply.
+
+15 × 3 = 45
+
+The value is 45.",,,,
+Order of Operations,400,"Evaluate 30 ÷ 5 + 6 × 4","Division first.
+
+30 ÷ 5 = 6
+
+Multiplication.
+
+6 × 4 = 24
+
+Add.
+
+6 + 24 = 30
+
+The value is 30.",,,,
+Order of Operations,500,"Evaluate 4 × (9 + 6) − 5 × 3","Evaluate parentheses.
+
+9 + 6 = 15
+
+Multiply.
+
+4 × 15 = 60
+5 × 3 = 15
+
+Subtract.
+
+60 − 15 = 45
+
+The value is 45.",,,,
+,,,,,,,,
+Area and Volume,100,"Find the area of a rectangle with length 8 and width 5","Area equals length times width.
+
+8 × 5 = 40
+
+The area is 40 square units.",,,,
+Area and Volume,200,"Find the perimeter of a rectangle with length 9 and width 4","Perimeter equals the sum of all sides.
+
+2 × 9 + 2 × 4
+
+18 + 8 = 26
+
+The perimeter is 26.",,,,
+Area and Volume,300,"Find the area of a rectangle with length 12 and width 6","Area equals length times width.
+
+12 × 6 = 72
+
+The area is 72 square units.",,,,
+Area and Volume,400,"A rectangular prism has length 5 width 3 and height 4. Find the volume","Volume equals length × width × height.
+
+5 × 3 × 4 = 60
+
+The volume is 60 cubic units.",,,,
+Area and Volume,500,"A rectangular prism has length 8 width 6 and height 5. Find the volume","Multiply the three dimensions.
+
+8 × 6 = 48
+
+48 × 5 = 240
+
+The volume is 240 cubic units.",,,,
+,,,,,,,,
+Data and Averages,100,"Find the mean of 4 6 and 8","Add the numbers.
+
+4 + 6 + 8 = 18
+
+Divide by the number of values.
+
+18 ÷ 3 = 6
+
+The mean is 6.",,,,
+Data and Averages,200,"Find the mean of 5 7 9","Add.
+
+5 + 7 + 9 = 21
+
+Divide by 3.
+
+21 ÷ 3 = 7
+
+The mean is 7.",,,,
+Data and Averages,300,"Find the median of 2 4 6 8 10","The numbers are already in order.
+
+The middle value is 6
+
+The median is 6.",,,,
+Data and Averages,400,"The mean of three numbers is 12. What is the total of the numbers","Mean equals total divided by number of values.
+
+Total = mean × number of values.
+
+12 × 3 = 36
+
+The total is 36.",,,,
+Data and Averages,500,"The mean of four numbers is 15. What is their total","Multiply the mean by the number of values.
+
+15 × 4 = 60
+
+The total of the numbers is 60.",,,,

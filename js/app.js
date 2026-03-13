@@ -299,6 +299,7 @@ const els = {
   scorePanel: document.getElementById("scorePanel"),
   scoreHeaderBar: document.getElementById("scoreHeaderBar"),
   scoreToggleBtn: document.getElementById("scoreToggleBtn"),
+  randomTeamBtn: document.getElementById("randomTeamBtn"),
   statusText: document.getElementById("statusText"),
   modalTimerMinusBtn: document.getElementById("modalTimerMinusBtn"),
   modalTimerStartStopBtn: document.getElementById("modalTimerStartStopBtn"),
@@ -323,6 +324,10 @@ const els = {
   settingsToggleBtn: document.getElementById("settingsToggleBtn"),
   settingsCloseBtn: document.getElementById("settingsCloseBtn"),
   settingsBackdrop: document.getElementById("settingsBackdrop"),
+  downloadTemplateBtn: document.getElementById("downloadTemplateBtn"),
+  viewUploadInstructionsBtn: document.getElementById("viewUploadInstructionsBtn"),
+  instructionsOverlay: document.getElementById("instructionsOverlay"),
+  instructionsCloseBtn: document.getElementById("instructionsCloseBtn"),
   appRoot: document.getElementById("app"),
   activeTeamSelect: null,
   activeTeamWrap: null,
@@ -379,11 +384,148 @@ function syncTeamLinkedVisuals(){
   if(els.overlay) els.overlay.style.setProperty("--team-accent", accent);
 }
 
+function getActiveTeamIndexes(){
+  const activeCount = clamp(state.teamCount, 1, TEAM_COLORS.length);
+  return Array.from({ length: activeCount }, (_, index) => index);
+}
+
+function setActiveTeam(index, { persist = true, rerender = true } = {}){
+  const nextIndex = clamp(parseInt(index, 10) || 0, 0, state.teamCount - 1);
+  state.selectedTeam = nextIndex;
+  if(persist) saveState();
+
+  if(rerender) renderScoreboard();
+  else {
+    renderActiveTeamOptions();
+    syncTeamLinkedVisuals();
+  }
+
+  updateModalMeta();
+  return nextIndex;
+}
+
 function closeTeamColorPalettes(){
   document.querySelectorAll(".teamColorPalette.show").forEach((palette) => {
     palette.classList.remove("show");
     palette.closest(".team")?.classList.remove("palette-open");
   });
+}
+
+function closeInstructionsOverlay(){
+  els.instructionsOverlay?.classList.remove("show");
+}
+
+function openInstructionsOverlay(){
+  els.instructionsOverlay?.classList.add("show");
+}
+
+function getRandomPickerAudioContext(){
+  const AudioContextCtor = window.AudioContext || window.webkitAudioContext;
+  if(!AudioContextCtor) return null;
+
+  if(!randomPickerAudioContext){
+    randomPickerAudioContext = new AudioContextCtor();
+  }
+
+  if(randomPickerAudioContext.state === "suspended"){
+    randomPickerAudioContext.resume().catch((err) => {
+      console.warn("Random picker audio resume blocked:", err);
+    });
+  }
+
+  return randomPickerAudioContext;
+}
+
+function playTick(){
+  const audioContext = getRandomPickerAudioContext();
+  if(!audioContext) return;
+
+  const now = audioContext.currentTime;
+  const oscillator = audioContext.createOscillator();
+  const gainNode = audioContext.createGain();
+  const durationSeconds = 0.04;
+
+  oscillator.type = "triangle";
+  oscillator.frequency.setValueAtTime(980, now);
+  gainNode.gain.setValueAtTime(0.0001, now);
+  gainNode.gain.exponentialRampToValueAtTime(0.11, now + 0.004);
+  gainNode.gain.exponentialRampToValueAtTime(0.0001, now + durationSeconds);
+
+  oscillator.connect(gainNode);
+  gainNode.connect(audioContext.destination);
+
+  oscillator.start(now);
+  oscillator.stop(now + durationSeconds);
+}
+
+function advanceRandomPickerHighlight(eligibleIndexes, step){
+  randomPickerHighlightIndex = eligibleIndexes[step % eligibleIndexes.length];
+  renderScoreboard();
+  playTick();
+}
+
+function stopRandomTeamPicker(){
+  if(randomPickerIntervalId){
+    window.clearTimeout(randomPickerIntervalId);
+    randomPickerIntervalId = null;
+  }
+  randomPickerRunning = false;
+  randomPickerHighlightIndex = null;
+  if(els.randomTeamBtn){
+    els.randomTeamBtn.disabled = false;
+    els.randomTeamBtn.textContent = "Random Team";
+  }
+}
+
+function runRandomTeamPicker(){
+  if(randomPickerRunning) return;
+
+  const eligibleIndexes = getActiveTeamIndexes();
+  if(!eligibleIndexes.length) return;
+
+  getRandomPickerAudioContext();
+
+  closeTeamColorPalettes();
+  const finalIndex = eligibleIndexes[Math.floor(Math.random() * eligibleIndexes.length)];
+
+  if(eligibleIndexes.length === 1){
+    setActiveTeam(finalIndex);
+    setStatus(`Random team: ${state.teams[finalIndex].name}`);
+    return;
+  }
+
+  randomPickerRunning = true;
+  if(els.randomTeamBtn){
+    els.randomTeamBtn.disabled = true;
+    els.randomTeamBtn.textContent = "Picking...";
+  }
+
+  const totalDurationMs = 4000;
+  const baseDelayMs = 45;
+  const slowdownFactorMs = 220;
+  const startedAt = performance.now();
+  let step = 0;
+
+  const runStep = () => {
+    if(!randomPickerRunning) return;
+
+    const elapsedMs = performance.now() - startedAt;
+    const progress = clamp(elapsedMs / totalDurationMs, 0, 1);
+    advanceRandomPickerHighlight(eligibleIndexes, step);
+    step += 1;
+
+    if(progress >= 1){
+      stopRandomTeamPicker();
+      setActiveTeam(finalIndex);
+      setStatus(`Random team: ${state.teams[finalIndex].name}`);
+      return;
+    }
+
+    const stepDelay = Math.round(baseDelayMs + (progress ** 2) * slowdownFactorMs);
+    randomPickerIntervalId = window.setTimeout(runStep, stepDelay);
+  };
+
+  runStep();
 }
 
 function normalizeTeams(rawTeams){
@@ -442,6 +584,10 @@ function saveState(){
 }
 
 let state = loadState();
+let randomPickerHighlightIndex = null;
+let randomPickerIntervalId = null;
+let randomPickerRunning = false;
+let randomPickerAudioContext = null;
 
 // Runtime used-clue set (single source of truth while page is open)
 const usedClues = new Set(Object.keys(state.used || {}).filter(k => state.used[k]));
@@ -536,15 +682,14 @@ function renderScoreboard(){
 
   for(let i=0; i<state.teamCount; i++){
     const t = state.teams[i];
+    const isPickerHighlight = randomPickerRunning && i === randomPickerHighlightIndex;
+    const isSelected = isPickerHighlight || (!randomPickerRunning && i === state.selectedTeam);
 
     const wrap = document.createElement("div");
-    wrap.className = "team" + (i === state.selectedTeam ? " selected" : "");
+    wrap.className = "team" + (isSelected ? " selected" : "") + (isPickerHighlight ? " is-picking" : "");
     wrap.style.setProperty("--team-accent", getTeamColor(i));
     wrap.addEventListener("click", () => {
-      state.selectedTeam = i;
-      saveState();
-      renderScoreboard();
-      updateModalMeta();
+      setActiveTeam(i);
     });
 
     const left = document.createElement("div");
@@ -746,11 +891,7 @@ function ensureActiveTeamControl(){
 
   select.addEventListener("change", () => {
     const next = clamp(parseInt(select.value, 10) || 0, 0, state.teamCount - 1);
-    state.selectedTeam = next;
-    applyActiveTeamAccent();
-    saveState();
-    renderScoreboard();
-    updateModalMeta();
+    setActiveTeam(next);
   });
 }
 
@@ -1127,6 +1268,7 @@ els.defaultTime?.addEventListener("change", () => {
 });
 
 els.teamCount.addEventListener("change", () => {
+  stopRandomTeamPicker();
   state.teamCount = clamp(parseInt(els.teamCount.value, 10) || state.teamCount || 2, 1, 6);
   state.selectedTeam = clamp(state.selectedTeam, 0, state.teamCount - 1);
   enforceUniqueTeamColors(state.teams, state.teamCount);
@@ -1167,6 +1309,7 @@ els.resetScoresBtn.addEventListener("click", () => {
 });
 
 els.resetGameBtn.addEventListener("click", () => {
+  stopRandomTeamPicker();
   const keepTeamCount = state.teamCount;
   const keepNames = state.teams.map(t => t.name);
   const keepColors = state.teams.map(t => t.color);
@@ -1185,8 +1328,10 @@ els.resetGameBtn.addEventListener("click", () => {
 // keyboard shortcuts
 document.addEventListener("keydown", (e) => {
   const isModalOpen = els.overlay.classList.contains("show");
+  const isInstructionsOpen = !!els.instructionsOverlay?.classList.contains("show");
   if(e.key === "Escape"){
     if(isModalOpen) closeClue();
+    else if(isInstructionsOpen) closeInstructionsOverlay();
     else closeSettingsDrawer();
   }
   if(e.key === " "){
@@ -1198,6 +1343,9 @@ document.addEventListener("keydown", (e) => {
 });
 
 document.addEventListener("click", closeTeamColorPalettes);
+els.instructionsOverlay?.addEventListener("click", (e) => {
+  if(e.target === els.instructionsOverlay) closeInstructionsOverlay();
+});
 
 // click outside modal to close
 els.overlay.addEventListener("click", (e) => {
@@ -1215,6 +1363,10 @@ document.addEventListener("fullscreenchange", () => {
 });
 
 els.scoreHeaderBar?.addEventListener("click", toggleScoreboardCollapsed);
+els.randomTeamBtn?.addEventListener("click", (e) => {
+  e.stopPropagation();
+  runRandomTeamPicker();
+});
 els.scoreToggleBtn?.addEventListener("click", (e) => {
   e.stopPropagation();
   toggleScoreboardCollapsed();
@@ -1230,7 +1382,53 @@ const BANK_CSV_KEY = "jeopardy_bank_csv";
 const BANK_FILE_KEY = "jeopardy_bank_filename";
 const BUILT_IN_BANK_PATH_KEY = "jeopardy_built_in_bank_path";
 const CSV_MANIFEST_PATH = "./csv-manifest.json";
+const TEMPLATE_DOWNLOAD_FILENAME = "jeopardy-template.csv";
+const TEMPLATE_DOWNLOAD_PATH = "./csv/template.csv";
 let builtInCsvs = [];
+
+function csvEscapeCell(value){
+  const text = String(value ?? "");
+  if(/[",\r\n]/.test(text)) return `"${text.replaceAll('"', '""')}"`;
+  return text;
+}
+
+function buildCsvTemplateText(){
+  const rows = [
+    ["category", "value", "question", "answer"],
+    ["Fractions", "100", "What is 1/2 + 1/2?", "1"],
+    ["Fractions", "200", "Write 3/4 as a decimal.", "0.75"],
+    ["Geometry", "100", "How many degrees are in a triangle?", "180"],
+    ["Statistics", "200", "What is the mean of 4, 6, and 8?", "6"],
+  ];
+
+  return rows.map((row) => row.map(csvEscapeCell).join(",")).join("\r\n");
+}
+
+function triggerBlobDownload(blob, filename){
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = filename;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  window.setTimeout(() => URL.revokeObjectURL(url), 0);
+}
+
+async function downloadCsvTemplate(){
+  try{
+    const response = await fetch(TEMPLATE_DOWNLOAD_PATH, { cache: "no-store" });
+    if(!response.ok) throw new Error(`Template request failed: ${response.status}`);
+    const blob = await response.blob();
+    triggerBlobDownload(blob, TEMPLATE_DOWNLOAD_FILENAME);
+    return;
+  }catch(err){
+    console.warn("Template file fetch failed, using inline fallback:", err);
+  }
+
+  const fallbackBlob = new Blob([buildCsvTemplateText()], { type: "text/csv;charset=utf-8;" });
+  triggerBlobDownload(fallbackBlob, TEMPLATE_DOWNLOAD_FILENAME);
+}
 
 function normalizeImageField(raw){
   const value = String(raw ?? "").trim();
@@ -1546,11 +1744,18 @@ function wireCsvButtons(){
     });
   }
 }
+
+function wireSettingsSupportButtons(){
+  els.downloadTemplateBtn?.addEventListener("click", downloadCsvTemplate);
+  els.viewUploadInstructionsBtn?.addEventListener("click", openInstructionsOverlay);
+  els.instructionsCloseBtn?.addEventListener("click", closeInstructionsOverlay);
+}
 /* ============================================================
    6) Init
    ============================================================ */
 async function init(){
   wireCsvButtons();
+  wireSettingsSupportButtons();
   await loadBuiltInManifest();
   await loadSavedCsvIfAny();
   initClueMusicControls();   // <-- ADD THIS LINE

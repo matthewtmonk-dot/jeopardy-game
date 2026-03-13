@@ -1,76 +1,203 @@
 category,value,question,answer,image,answer_image,,,
-Fractions & Decimals,100,Write 5/8 as a decimal.,"Divide 5 ÷ 8.
-5 ÷ 8 = 0.625
-So the decimal form of 5/8 is 0.625.",fraction-bar-5-8.png,fraction-division-model-5-8.png,,,
-Fractions & Decimals,200,Find the sum: 2/3 + 1/6,5/6, so sqrt(25) is greatest.,expressions-comparison-diagram.png,evaluated-values-comparison-chart.png,,
-Fractions & Decimals,300,Solve the expression: 4/5 × 5/6 = ?,"Multiply numerators and denominators:
-4×5 = 20
-5×6 = 30
-20/30 simplifies to 2/3.",fraction-multiplication-area-model.png,fraction-simplification-20-30.png,,,
-Fractions & Decimals,400,A recipe uses 1 3/4 cups of sugar. You triple the recipe. How much sugar is needed?,"Convert to improper fraction:
-1 3/4 = 7/4
-Multiply 7/4 × 3 = 21/4
-21/4 = 5 1/4 cups.",mixed-number-recipe-diagram.png,mixed-number-multiplication-visual.png,,,
-Fractions & Decimals,500,A tank is 2/3 full. Then 1/6 of the tank capacity is added. How full is it now?,"Add fractions:
-2/3 = 4/6
-4/6 + 1/6 = 5/6
-The tank is now 5/6 full.",tank-fraction-fill-diagram.png,fraction-addition-tank-model.png,,,
+Fractions and Mixed Numbers,100,"Compute 5/6 + 1/3","Convert to a common denominator.
+
+1/3 = 2/6
+
+5/6 + 2/6 = 7/6
+
+7/6 = 1 1/6
+
+The sum is 1 1/6.",,,,
+Fractions and Mixed Numbers,200,"Compute 7/8 − 3/4","Convert to a common denominator.
+
+3/4 = 6/8
+
+7/8 − 6/8 = 1/8
+
+The answer is 1/8.",,,,
+Fractions and Mixed Numbers,300,"Multiply 3/5 × 4/7","Multiply the numerators and denominators.
+
+3 × 4 = 12
+5 × 7 = 35
+
+The product is 12/35.",,,,
+Fractions and Mixed Numbers,400,"Compute 2 1/3 × 3","Convert the mixed number.
+
+2 1/3 = 7/3
+
+Multiply.
+
+7/3 × 3 = 7
+
+The answer is 7.",,,,
+Fractions and Mixed Numbers,500,"Compute 5/6 ÷ 2/3","Division of fractions means multiply by the reciprocal.
+
+5/6 × 3/2
+
+Multiply.
+
+15/12
+
+Simplify.
+
+5/4 = 1 1/4
+
+The answer is 1 1/4.",,,,
 ,,,,,,,,
-Ratios & Rates,100,Simplify the ratio 18:24,"Find the greatest common factor (6).
-18 ÷ 6 = 3
-24 ÷ 6 = 4
-Simplified ratio = 3:4",ratio-block-visual-18-24.png,ratio-simplification-diagram.png,,,
-Ratios & Rates,200,5 pencils cost $7.50. What is the unit price?,"Unit rate means price per 1 item.
-7.50 ÷ 5 = 1.50
-Each pencil costs $1.50",unit-rate-pencil-diagram.png,division-unit-rate-model.png,,,
-Ratios & Rates,300,A map scale is 1 cm = 8 km. How many km does 6 cm represent?,"Multiply using the scale:
-6 × 8 = 48 km.",map-scale-ruler-diagram.png,map-scale-multiplication-visual.png,,,
-Ratios & Rates,400,The ratio of cats to dogs is 4:3. There are 21 animals total. How many are cats?,"Total ratio parts = 7
-21 ÷ 7 = 3 per part.
-Cats = 4 × 3 = 12",ratio-groups-visual.png,ratio-scaling-groups.png,,,
-Ratios & Rates,500,A car travels 240 miles in 4 hours. What is the speed in miles per hour?,"Speed = distance ÷ time.
-240 ÷ 4 = 60 mph.",distance-rate-time-triangle.png,speed-calculation-diagram.png,,,
+Ratios and Unit Rates,100,"Simplify the ratio 16 to 24","Find the greatest common factor.
+
+The GCF of 16 and 24 is 8.
+
+16 ÷ 8 = 2
+24 ÷ 8 = 3
+
+The simplified ratio is 2 to 3.",,,,
+Ratios and Unit Rates,200,"5 notebooks cost 15 dollars. Find the unit price","Divide total cost by number of items.
+
+15 ÷ 5 = 3
+
+Each notebook costs 3 dollars.",,,,
+Ratios and Unit Rates,300,"A runner travels 24 miles in 4 hours. Find the unit rate in miles per hour","Unit rate means per one hour.
+
+24 ÷ 4 = 6
+
+The runner travels 6 miles per hour.",,,,
+Ratios and Unit Rates,400,"A recipe uses 3 cups of flour for 8 servings. How many cups are needed for 16 servings","Find cups per serving.
+
+3 ÷ 8 = 0.375
+
+Multiply by 16 servings.
+
+16 × 0.375 = 6
+
+You need 6 cups of flour.",,,,
+Ratios and Unit Rates,500,"A map scale shows 1 centimeter represents 9 kilometers. Two cities are 7 centimeters apart on the map. Find the real distance","Use the scale relationship.
+
+1 centimeter represents 9 kilometers.
+
+7 × 9 = 63
+
+The real distance is 63 kilometers.",,,,
 ,,,,,,,,
-Expressions & Equations,100,Evaluate 6 + 4 × 3.,"Order of operations:
-Multiply first → 4×3=12
-Then add → 6+12=18.",order-of-operations-example.png,order-of-operations-steps.png,,,
-Expressions & Equations,200,Solve x + 9 = 21.,"Subtract 9 from both sides:
-x = 21 − 9
-x = 12.",two-step-equation-balance-scale.png,solving-equation-balance-method.png,,,
-Expressions & Equations,300,Solve 4x = 32.,"Divide both sides by 4:
-x = 32 ÷ 4
-x = 8.",equation-division-balance.png,algebra-balance-solution.png,,,
-Expressions & Equations,400,Solve 3x + 4 = 19.,"Subtract 4:
-3x = 15
-Divide by 3:
-x = 5.",two-step-equation-balance.png,algebra-solving-steps-diagram.png,,,
-Expressions & Equations,500,Five times a number minus 7 equals 18. Find the number.,"Equation: 5x − 7 = 18
-Add 7 → 5x = 25
-Divide by 5 → x = 5.",word-problem-equation-model.png,equation-solving-flowchart.png,,,
+Expressions and Order of Operations,100,"Evaluate 8 + 6 × 5","Use order of operations.
+
+Multiply first.
+
+6 × 5 = 30
+
+Add.
+
+8 + 30 = 38
+
+The value is 38.",,,,
+Expressions and Order of Operations,200,"Evaluate 24 − 3 × 4","Multiply first.
+
+3 × 4 = 12
+
+Subtract.
+
+24 − 12 = 12
+
+The value is 12.",,,,
+Expressions and Order of Operations,300,"Evaluate (9 + 6) × 4","Evaluate the parentheses first.
+
+9 + 6 = 15
+
+Multiply.
+
+15 × 4 = 60
+
+The value is 60.",,,,
+Expressions and Order of Operations,400,"Evaluate 36 ÷ 6 + 5 × 4","Division first.
+
+36 ÷ 6 = 6
+
+Multiplication.
+
+5 × 4 = 20
+
+Add.
+
+6 + 20 = 26
+
+The value is 26.",,,,
+Expressions and Order of Operations,500,"Evaluate 5 × (8 + 4) − 3 × 6","Evaluate parentheses.
+
+8 + 4 = 12
+
+Multiply.
+
+5 × 12 = 60
+3 × 6 = 18
+
+Subtract.
+
+60 − 18 = 42
+
+The value is 42.",,,,
 ,,,,,,,,
-Geometry,100,Find the area of a rectangle with length 9 cm and width 4 cm.,"Area = length × width.
-9 × 4 = 36 cm².",rectangle-area-diagram.png,rectangle-area-formula-visual.png,,,
-Geometry,200,"Find the perimeter of a triangle with sides 8 cm, 9 cm, and 11 cm.","Perimeter = sum of sides.
-8 + 9 + 11 = 28 cm.",triangle-side-labels.png,triangle-perimeter-sum.png,,,
-Geometry,300,Find the area of a triangle with base 12 cm and height 5 cm.,"Area formula = ½ × base × height.
-½ × 12 × 5 = 30 cm².",triangle-base-height-diagram.png,triangle-area-formula-visual.png,,,
-Geometry,400,"A rectangular prism has length 6 cm,  width 4 cm,  and height 3 cm. Find the volume.","Volume = l × w × h.
-6 × 4 × 3 = 72 cm³.",G4Qvolume-multiplication-steps.png,G4volume-multiplication-steps.png,,,
-Geometry,500,Find the area of a trapezoid with bases 10 cm and 6 cm and height 4 cm.,"Area formula = ½(b1+b2)h
-½(10+6)×4
-½(16×4)=32 cm².",G5Qtrapezoid-area-formula-visual.png,G5Atrapezoid-area-formula-visual.png,,,
+Area and Volume,100,"Find the area of a rectangle with length 9 and width 6","Area equals length times width.
+
+9 × 6 = 54
+
+The area is 54 square units.",,,,
+Area and Volume,200,"Find the perimeter of a rectangle with length 12 and width 5","Perimeter equals the sum of all sides.
+
+2 × 12 + 2 × 5
+
+24 + 10 = 34
+
+The perimeter is 34.",,,,
+Area and Volume,300,"Find the area of a triangle with base 10 and height 8","Use the triangle area formula.
+
+Area = one half × base × height
+
+0.5 × 10 × 8 = 40
+
+The area is 40 square units.",,,,
+Area and Volume,400,"A rectangular prism has length 7 width 4 and height 3. Find the volume","Volume equals length × width × height.
+
+7 × 4 × 3 = 84
+
+The volume is 84 cubic units.",,,,
+Area and Volume,500,"A rectangular prism has base area 24 square units and height 5 units. Find the volume","Volume equals base area times height.
+
+24 × 5 = 120
+
+The volume is 120 cubic units.",,,,
 ,,,,,,,,
-Statistics & Data,100,"Find the mean of 3, 7, and 11","Mean = sum ÷ number of values.
-3+7+11 = 21
-21 ÷ 3 = 7.",,,,,
-Statistics & Data,200,"Find the median of 5, 9 ,11, and 14","Median = middle number.
-Since there are 4 numbers average the middle two:
-(9+11)/2 = 10.",,,,,
-Statistics & Data,300,"A data set includes 3, 6, 6, 7,  and 9. What is the mode?","Mode = value that appears most often.
-6 appears twice  more than the others.
-Mode = 6.",,,,,
-Statistics & Data,400,"A bar graph shows 15 red votes,  10 blue votes,  and 5 green votes. How many total votes are there?","Add all categories:
-15 + 10 + 5 = 30 votes.",,,,,
-Statistics & Data,500,The average of 4 numbers is 15. What is their total sum?,"Average = total ÷ number.
-Total = average × number
-15 × 4 = 60.",,,,,
+Statistics and Data,100,"Find the mean of 6 8 and 10","Add the numbers.
+
+6 + 8 + 10 = 24
+
+Divide by the number of values.
+
+24 ÷ 3 = 8
+
+The mean is 8.",,,,
+Statistics and Data,200,"Find the median of 3 5 7 9 11","The numbers are already in order.
+
+The middle value is 7
+
+The median is 7.",,,,
+Statistics and Data,300,"Find the mode of 2 4 4 5 7 7 7 9","The mode is the number that appears most often.
+
+7 appears three times.
+
+The mode is 7.",,,,
+Statistics and Data,400,"The mean of four numbers is 12. What is the total of the numbers","Mean equals total divided by number of values.
+
+Total = mean × number of values.
+
+12 × 4 = 48
+
+The total is 48.",,,,
+Statistics and Data,500,"The mean of five numbers is 18. One of the numbers is 10. What is the sum of the other four numbers","First find the total of all five numbers.
+
+18 × 5 = 90
+
+Subtract the known value.
+
+90 − 10 = 80
+
+The sum of the remaining four numbers is 80.",,,,

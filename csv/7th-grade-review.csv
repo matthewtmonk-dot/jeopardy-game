@@ -1,99 +1,206 @@
 category,value,question,answer,image,answer_image,,,
-Fractions & Decimals,100,Write 3/4 as a decimal.,"Divide 3 ÷ 4.
-3 ÷ 4 = 0.75
-So the decimal form of 3/4 is 0.75.",,,,
-Fractions & Decimals,200,Find the sum: 5/6 + 1/3,"Find a common denominator.
-1/3 = 2/6
-5/6 + 2/6 = 7/6
-7/6 = 1 1/6 as a mixed number.",,,,
-Fractions & Decimals,300,Solve the expression: 3/5 × 4/7 = ?,"Multiply numerators and denominators.
-3 × 4 = 12
-5 × 7 = 35
-The answer is 12/35.",,,,
-Fractions & Decimals,400,A student runs 2/3 mile each day for 5 days. How far does the student run total?,"Multiply the fraction by the number of days.
-2/3 × 5 = 10/3
-Convert to a mixed number.
-10/3 = 3 1/3 miles.",,,,
-Fractions & Decimals,500,A water tank is 3/5 full. Then 1/4 of the tank capacity is added. How full is the tank now?,"Find a common denominator.
-3/5 = 12/20
-1/4 = 5/20
-Add the fractions.
-12/20 + 5/20 = 17/20
-The tank is 17/20 full.",,,,
+Proportional Relationships,100,"Determine if the relationship is proportional.
+
+x: 2 4 6 8
+y: 5 10 15 20","Check the ratio y ÷ x.
+
+5 ÷ 2 = 2.5
+10 ÷ 4 = 2.5
+15 ÷ 6 = 2.5
+20 ÷ 8 = 2.5
+
+The ratio is constant so the relationship is proportional.",,,,
+Proportional Relationships,200,"If 6 notebooks cost 15 dollars what is the unit price per notebook","Unit price means cost for one item.
+
+15 ÷ 6 = 2.5
+
+Each notebook costs 2.5 dollars.",,,,
+Proportional Relationships,300,"A car travels 210 miles in 3 hours. What is the unit rate in miles per hour","Unit rate means distance per 1 hour.
+
+210 ÷ 3 = 70
+
+The car travels 70 miles per hour.",,,,
+Proportional Relationships,400,"A recipe uses 4 cups of flour for 10 servings. How many cups are needed for 15 servings","Set up a proportion.
+
+4 cups for 10 servings
+x cups for 15 servings
+
+Find cups per serving.
+4 ÷ 10 = 0.4
+
+Multiply.
+15 × 0.4 = 6
+
+You need 6 cups of flour.",,,,
+Proportional Relationships,500,"A map scale shows 1 centimeter represents 12 kilometers. Two cities are 4.5 centimeters apart on the map. Find the real distance","Use the scale relationship.
+
+1 centimeter represents 12 kilometers.
+
+4.5 × 12 = 54
+
+The real distance is 54 kilometers.",,,,
 ,,,,,,,,
-Ratios & Rates,100,Simplify the ratio 15:20,"Find the greatest common factor.
-The GCF of 15 and 20 is 5.
-15 ÷ 5 = 3
-20 ÷ 5 = 4
-The simplified ratio is 3:4.",,,,
-Ratios & Rates,200,8 notebooks cost $12. What is the unit price?,"Unit rate means cost for one item.
-12 ÷ 8 = 1.50
-Each notebook costs $1.50.",,,,
-Ratios & Rates,300,A map scale is 1 cm = 5 km. How many kilometers does 7 cm represent?,"Multiply using the scale.
-7 × 5 = 35
-The distance is 35 km.",,,,
-Ratios & Rates,400,The ratio of boys to girls in a class is 3:5. There are 24 students total. How many are girls?,"Total ratio parts = 3 + 5 = 8.
-Each part = 24 ÷ 8 = 3.
-Girls = 5 × 3 = 15.",,,,
-Ratios & Rates,500,A cyclist travels 180 miles in 3 hours. What is the speed in miles per hour?,"Speed = distance ÷ time.
-180 ÷ 3 = 60
-The cyclist travels 60 miles per hour.",,,,
+Percent Applications,100,"Find 35 percent of 80","Convert percent to a decimal.
+
+35 percent = 0.35
+
+Multiply.
+0.35 × 80 = 28
+
+The answer is 28.",,,,
+Percent Applications,200,"A backpack costs 60 dollars and is discounted by 20 percent. How much is the discount","Find 20 percent of 60.
+
+0.20 × 60 = 12
+
+The discount is 12 dollars.",,,,
+Percent Applications,300,"After the 20 percent discount on a 60 dollar backpack what is the sale price","First find the discount.
+
+20 percent of 60 = 12
+
+Subtract from the original price.
+
+60 − 12 = 48
+
+The sale price is 48 dollars.",,,,
+Percent Applications,400,"A 75 dollar purchase has an 8 percent sales tax. What is the total cost","Find the tax.
+
+0.08 × 75 = 6
+
+Add the tax to the price.
+
+75 + 6 = 81
+
+The total cost is 81 dollars.",,,,
+Percent Applications,500,"The price of an item increases from 45 dollars to 54 dollars. Find the percent increase","Find the increase.
+
+54 − 45 = 9
+
+Divide by the original value.
+
+9 ÷ 45 = 0.2
+
+Convert to percent.
+
+0.2 = 20 percent
+
+The percent increase is 20 percent.",,,,
 ,,,,,,,,
-Expressions & Equations,100,Evaluate 9 + 2 × 6.,"Use order of operations.
+Expressions and Equations,100,"Evaluate 6 + 3 × 8","Use order of operations.
+
 Multiply first.
-2 × 6 = 12
-Then add.
-9 + 12 = 21.",,,,
-Expressions & Equations,200,Solve x + 14 = 29.,"Subtract 14 from both sides.
-x = 29 − 14
-x = 15.",,,,
-Expressions & Equations,300,Solve 7x = 56.,"Divide both sides by 7.
-x = 56 ÷ 7
-x = 8.",,,,
-Expressions & Equations,400,Solve 4x + 3 = 23.,"Subtract 3 from both sides.
-4x = 20
-Divide by 4.
-x = 5.",,,,
-Expressions & Equations,500,Three times a number plus 8 equals 29. Find the number.,"Write the equation.
-3x + 8 = 29
-Subtract 8.
-3x = 21
+3 × 8 = 24
+
+Add.
+6 + 24 = 30
+
+The value is 30.",,,,
+Expressions and Equations,200,"Solve 4x = 36","Divide both sides by 4.
+
+x = 36 ÷ 4
+
+x = 9
+
+The solution is x = 9.",,,,
+Expressions and Equations,300,"Solve x + 9 = 21","Subtract 9 from both sides.
+
+x = 21 − 9
+
+x = 12
+
+The solution is x = 12.",,,,
+Expressions and Equations,400,"Solve 3x + 5 = 20","Subtract 5 from both sides.
+
+3x = 15
+
 Divide by 3.
-x = 7.",,,,
+
+x = 5
+
+The solution is x = 5.",,,,
+Expressions and Equations,500,"Three times a number minus 7 equals 20. Find the number","Let the number be x.
+
+3x − 7 = 20
+
+Add 7 to both sides.
+
+3x = 27
+
+Divide by 3.
+
+x = 9
+
+The number is 9.",,,,
 ,,,,,,,,
-Geometry,100,Find the area of a rectangle with length 7 cm and width 5 cm.,"Area = length × width.
-7 × 5 = 35
-The area is 35 cm².",,,,
-Geometry,200,"Find the perimeter of a triangle with sides 6 cm, 8 cm, and 10 cm.","Perimeter is the sum of the side lengths.
-6 + 8 + 10 = 24
-The perimeter is 24 cm.",,,,
-Geometry,300,Find the area of a triangle with base 10 cm and height 6 cm.,"Use the triangle area formula.
-Area = 1/2 × base × height
-1/2 × 10 × 6 = 30
-The area is 30 cm².",,,,
-Geometry,400,A rectangular prism has length 8 cm width 3 cm and height 5 cm. Find the volume.,"Volume = length × width × height.
-8 × 3 × 5 = 120
-The volume is 120 cm³.",34Qrectangular-prism-diagram.png,34Avolume-multiplication-steps.png,,,
-Geometry,500,Find the area of a trapezoid with bases 12 cm and 8 cm and height 5 cm.,"Use the trapezoid area formula.
-A = 1/2(b1 + b2)h
-1/2(12 + 8) × 5
-1/2(20 × 5) = 50
-The area is 50 cm².",35Qtrapezoid-area-diagram.png,35Atrapezoid-area-steps.png,,,
+Geometry and Circles,100,"Find the area of a rectangle with length 12 and width 7","Area equals length times width.
+
+12 × 7 = 84
+
+The area is 84 square units.",,,,
+Geometry and Circles,200,"Find the circumference of a circle with radius 6. Use pi approximately 3.14","Use the formula C = 2 × pi × r.
+
+2 × 3.14 × 6 = 37.68
+
+The circumference is approximately 37.68.",,,,
+Geometry and Circles,300,"Find the area of a circle with radius 5. Use pi approximately 3.14","Use the formula A = pi × r squared.
+
+5 squared = 25
+
+3.14 × 25 = 78.5
+
+The area is approximately 78.5.",,,,
+Geometry and Circles,400,"A triangle has base 14 and height 9. Find the area","Use the triangle area formula.
+
+Area = one half × base × height
+
+0.5 × 14 × 9 = 63
+
+The area is 63 square units.",,,,
+Geometry and Circles,500,"A rectangular prism has length 9 width 5 and height 4. Find the volume","Volume equals length × width × height.
+
+9 × 5 × 4 = 180
+
+The volume is 180 cubic units.",,,,
 ,,,,,,,,
-Statistics & Data,100,"Find the mean of 6, 8, and 10","Mean = sum ÷ number of values.
-6 + 8 + 10 = 24
-24 ÷ 3 = 8.",,,,
-Statistics & Data,200,"Find the median of 4, 7, 9, and 13","Order the numbers.
-4, 7, 9, 13
-There are four numbers so average the middle two.
-(7 + 9) ÷ 2 = 8.",,,,
-Statistics & Data,300,"A data set includes 2, 5, 5, 6, and 9. What is the mode?","The mode is the number that appears most often.
-5 appears twice.
-The mode is 5.",,,,
-Statistics & Data,400,A bar graph shows 18 red votes 12 blue votes and 10 green votes. How many votes total?,"Add all the categories.
-18 + 12 + 10 = 40
-There are 40 total votes.",40Qbar-graph-votes.png,40Atotal-votes-addition.png,,,
-Statistics & Data,500,The average of 5 numbers is 12. What is the total of the numbers?,"Average = total ÷ number of values.
-Total = average × number.
-12 × 5 = 60
-The total of the numbers is 60.",,,,
+Probability,100,"A bag contains 4 red marbles and 6 blue marbles. What is the probability of selecting a red marble","Total marbles = 4 + 6 = 10
+
+Probability = favorable outcomes ÷ total outcomes
+
+4 ÷ 10
+
+The probability is 2/5.",,,,
+Probability,200,"A number is chosen from 1 through 8. What is the probability of choosing an even number","Even numbers are 2 4 6 8.
+
+There are 4 even numbers out of 8 total numbers.
+
+4 ÷ 8 = 1/2
+
+The probability is 1/2.",,,,
+Probability,300,"A spinner has 5 equal sections labeled A B C D E. What is the probability of landing on C","There are 5 equal outcomes.
+
+Only one outcome is C.
+
+Probability = 1 ÷ 5
+
+The probability is 1/5.",,,,
+Probability,400,"A bag has 3 green 4 yellow and 5 blue marbles. What is the probability of choosing yellow","Total marbles = 3 + 4 + 5 = 12
+
+Yellow marbles = 4
+
+Probability = 4 ÷ 12
+
+Simplify.
+
+1/3
+
+The probability is 1/3.",,,,
+Probability,500,"Two fair coins are flipped. What is the probability of getting exactly one head","List the possible outcomes.
+
+HH HT TH TT
+
+Exactly one head occurs in HT and TH.
+
+2 outcomes out of 4.
+
+2 ÷ 4 = 1/2
+
+The probability is 1/2.",,,,

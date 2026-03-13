@@ -62,6 +62,8 @@
         <button class="btn" id="loadBuiltInBankBtn" type="button">Load Built-in</button>
         <button class="btn" id="loadBankBtn" type="button">Upload CSV From Device</button>
         <button class="btn ghost" id="clearBankBtn" type="button" title="Remove saved CSV and go back to the built-in bank">Clear Loaded Bank</button>
+        <button class="btn ghost" id="downloadTemplateBtn" type="button">Download CSV Template</button>
+        <button class="btn ghost" id="viewUploadInstructionsBtn" type="button">View Upload Instructions</button>
       </div>
       <input id="bankFileInput" type="file" accept=".csv" hidden />
     </div>
@@ -75,9 +77,14 @@
 
     <aside class="scorePanel" id="scorePanel" aria-label="Scoreboard">
       <div class="scoreHeader" id="scoreHeaderBar">
-        <h2>Scoreboard</h2>
-        <div class="hint">Select a team, then score</div>
-        <button class="btn ghost mini scoreToggleBtn" id="scoreToggleBtn" type="button" aria-expanded="true" aria-controls="scoreBody">▲</button>
+        <div class="scoreHeaderMain">
+          <h2>Scoreboard</h2>
+          <div class="hint">Select a team, then score</div>
+        </div>
+        <div class="scoreHeaderActions">
+          <button class="btn mini" id="randomTeamBtn" type="button" title="Pick a random active team">Random Team</button>
+          <button class="btn ghost mini scoreToggleBtn" id="scoreToggleBtn" type="button" aria-expanded="true" aria-controls="scoreBody">▲</button>
+        </div>
       </div>
 
       <div class="scoreBody" id="scoreBody"></div>
@@ -93,6 +100,31 @@
 </div>
 
 <div class="settingsBackdrop" id="settingsBackdrop" hidden></div>
+
+<div class="overlay infoOverlay" id="instructionsOverlay" role="dialog" aria-modal="true" aria-labelledby="instructionsTitle">
+  <div class="modal infoModal">
+    <div class="modalTop">
+      <div class="meta">
+        <div class="line1" id="instructionsTitle">CSV Upload Instructions</div>
+        <div class="line2">Teacher-friendly steps for formatting and importing a game board.</div>
+      </div>
+      <button class="btn ghost" id="instructionsCloseBtn" type="button">Close</button>
+    </div>
+    <div class="modalBody infoModalBody">
+      <div class="infoCard">
+        <p>Use a CSV file with exactly these columns: <strong>category</strong>, <strong>value</strong>, <strong>question</strong>, <strong>answer</strong>.</p>
+        <ul class="infoList">
+          <li>Each row is one clue on the board.</li>
+          <li>Use values like 100, 200, 300, 400, and 500 for a standard Jeopardy board.</li>
+          <li>Keep category names consistent so clues group correctly.</li>
+          <li>If a question or answer contains commas, let your spreadsheet app wrap the cell correctly when saving as CSV.</li>
+          <li>Save the file as CSV before uploading.</li>
+          <li>Then use the existing Upload CSV From Device button in Settings to import it into the game.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Modal -->
 <div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-label="Clue">

@@ -1,99 +1,254 @@
 category,value,question,answer,image,answer_image,,,
-Fractions & Decimals,100,Write 3/4 as a decimal.,"Divide 3 ÷ 4.
-3 ÷ 4 = 0.75
-So the decimal form of 3/4 is 0.75.",,,,
-Fractions & Decimals,200,Find the sum: 5/6 + 1/3,"Find a common denominator.
-1/3 = 2/6
-5/6 + 2/6 = 7/6
-7/6 = 1 1/6 as a mixed number.",,,,
-Fractions & Decimals,300,Solve the expression: 3/5 × 4/7 = ?,"Multiply numerators and denominators.
-3 × 4 = 12
-5 × 7 = 35
-The answer is 12/35.",,,,
-Fractions & Decimals,400,A student runs 2/3 mile each day for 5 days. How far does the student run total?,"Multiply the fraction by the number of days.
-2/3 × 5 = 10/3
-Convert to a mixed number.
-10/3 = 3 1/3 miles.",,,,
-Fractions & Decimals,500,A water tank is 3/5 full. Then 1/4 of the tank capacity is added. How full is the tank now?,"Find a common denominator.
-3/5 = 12/20
-1/4 = 5/20
-Add the fractions.
-12/20 + 5/20 = 17/20
-The tank is 17/20 full.",,,,
-,,,,,,,,
-Ratios & Rates,100,Simplify the ratio 15:20,"Find the greatest common factor.
-The GCF of 15 and 20 is 5.
-15 ÷ 5 = 3
-20 ÷ 5 = 4
-The simplified ratio is 3:4.",,,,
-Ratios & Rates,200,8 notebooks cost $12. What is the unit price?,"Unit rate means cost for one item.
-12 ÷ 8 = 1.50
-Each notebook costs $1.50.",,,,
-Ratios & Rates,300,A map scale is 1 cm = 5 km. How many kilometers does 7 cm represent?,"Multiply using the scale.
-7 × 5 = 35
-The distance is 35 km.",,,,
-Ratios & Rates,400,The ratio of boys to girls in a class is 3:5. There are 24 students total. How many are girls?,"Total ratio parts = 3 + 5 = 8.
-Each part = 24 ÷ 8 = 3.
-Girls = 5 × 3 = 15.",,,,
-Ratios & Rates,500,A cyclist travels 180 miles in 3 hours. What is the speed in miles per hour?,"Speed = distance ÷ time.
-180 ÷ 3 = 60
-The cyclist travels 60 miles per hour.",,,,
-,,,,,,,,
-Expressions & Equations,100,Evaluate 9 + 2 × 6.,"Use order of operations.
-Multiply first.
-2 × 6 = 12
-Then add.
-9 + 12 = 21.",,,,
-Expressions & Equations,200,Solve x + 14 = 29.,"Subtract 14 from both sides.
-x = 29 − 14
-x = 15.",,,,
-Expressions & Equations,300,Solve 7x = 56.,"Divide both sides by 7.
-x = 56 ÷ 7
-x = 8.",,,,
-Expressions & Equations,400,Solve 4x + 3 = 23.,"Subtract 3 from both sides.
-4x = 20
+Linear Equations,100,"Solve 4x - 7 = 21.","Add 7 to both sides.
+4x = 28
+
 Divide by 4.
-x = 5.",,,,
-Expressions & Equations,500,Three times a number plus 8 equals 29. Find the number.,"Write the equation.
-3x + 8 = 29
-Subtract 8.
-3x = 21
+x = 7
+
+The solution is x = 7.",,,,
+Linear Equations,200,"Solve 3(x + 5) = 27.","Divide both sides by 3.
+x + 5 = 9
+
+Subtract 5.
+x = 4
+
+The solution is x = 4.",,,,
+Linear Equations,300,"Solve 5x - 2 = 3x + 14.","Subtract 3x from both sides.
+2x - 2 = 14
+
+Add 2.
+2x = 16
+
+Divide by 2.
+x = 8
+
+The solution is x = 8.",,,,
+Linear Equations,400,"Solve 2(3x - 4) + 5 = 19.","Distribute first.
+6x - 8 + 5 = 19
+
+Combine like terms.
+6x - 3 = 19
+
+Add 3.
+6x = 22
+
+Divide by 6.
+x = 11/3
+
+The solution is x = 11/3.",,,,
+Linear Equations,500,"The sum of twice a number and 9 is the same as 5 less than 4 times the number. Find the number.","Let the number be x.
+
+Twice the number plus 9 is 2x + 9.
+Five less than 4 times the number is 4x - 5.
+
+Set them equal.
+2x + 9 = 4x - 5
+
+Subtract 2x.
+9 = 2x - 5
+
+Add 5.
+14 = 2x
+
+Divide by 2.
+x = 7
+
+The number is 7.",,,,
+,,,,,,,,
+Systems of Equations,100,"Solve the system y = x + 4 and x = 6.","Substitute x = 6 into y = x + 4.
+
+y = 6 + 4
+y = 10
+
+The solution is (6 10).",,,,
+Systems of Equations,200,"Solve the system x + y = 13 and x = 5.","Substitute x = 5 into x + y = 13.
+
+5 + y = 13
+
+Subtract 5.
+y = 8
+
+The solution is (5 8).",,,,
+Systems of Equations,300,"Solve the system y = 2x + 1 and x + y = 10.","Substitute y = 2x + 1 into x + y = 10.
+
+x + 2x + 1 = 10
+3x + 1 = 10
+
+Subtract 1.
+3x = 9
+
 Divide by 3.
-x = 7.",,,,
+x = 3
+
+Now find y.
+y = 2(3) + 1 = 7
+
+The solution is (3 7).",,,,
+Systems of Equations,400,"Solve the system x + y = 11 and x - y = 1.","Add the equations.
+
+(x + y) + (x - y) = 11 + 1
+2x = 12
+
+Divide by 2.
+x = 6
+
+Substitute into x + y = 11.
+6 + y = 11
+
+Subtract 6.
+y = 5
+
+The solution is (6 5).",,,,
+Systems of Equations,500,"Solve the system 2x + y = 11 and x - y = 1.","Add the equations to eliminate y.
+
+(2x + y) + (x - y) = 11 + 1
+3x = 12
+
+Divide by 3.
+x = 4
+
+Substitute into x - y = 1.
+4 - y = 1
+
+Subtract 4 from both sides.
+-y = -3
+
+So y = 3
+
+The solution is (4 3).",,,,
 ,,,,,,,,
-Geometry,100,Find the area of a rectangle with length 7 cm and width 5 cm.,"Area = length × width.
-7 × 5 = 35
-The area is 35 cm².",,,,
-Geometry,200,"Find the perimeter of a triangle with sides 6 cm, 8 cm, and 10 cm.","Perimeter is the sum of the side lengths.
-6 + 8 + 10 = 24
-The perimeter is 24 cm.",,,,
-Geometry,300,Find the area of a triangle with base 10 cm and height 6 cm.,"Use the triangle area formula.
-Area = 1/2 × base × height
-1/2 × 10 × 6 = 30
-The area is 30 cm².",,,,
-Geometry,400,A rectangular prism has length 8 cm width 3 cm and height 5 cm. Find the volume.,"Volume = length × width × height.
-8 × 3 × 5 = 120
-The volume is 120 cm³.",34Qrectangular-prism-diagram.png,34Avolume-multiplication-steps.png,,,
-Geometry,500,Find the area of a trapezoid with bases 12 cm and 8 cm and height 5 cm.,"Use the trapezoid area formula.
-A = 1/2(b1 + b2)h
-1/2(12 + 8) × 5
-1/2(20 × 5) = 50
-The area is 50 cm².",35Qtrapezoid-area-diagram.png,35Atrapezoid-area-steps.png,,,
+Functions and Slope,100,"Find the value of y when y = 3x - 2 and x = 5.","Substitute x = 5.
+
+y = 3(5) - 2
+y = 15 - 2
+y = 13
+
+The value of y is 13.",,,,
+Functions and Slope,200,"Find the slope of the line through (2 3) and (6 11).","Use slope = change in y over change in x.
+
+11 - 3 = 8
+6 - 2 = 4
+
+Slope = 8/4 = 2
+
+The slope is 2.",,,,
+Functions and Slope,300,"Does the table represent a linear function?
+
+x: 1 2 3 4
+y: 4 7 10 13","Check the change in y.
+
+7 - 4 = 3
+10 - 7 = 3
+13 - 10 = 3
+
+The change is constant so the relationship is linear.
+
+Yes this table represents a linear function.",,,,
+Functions and Slope,400,"Find the equation of a line with slope 3 and y intercept -4.","Use slope intercept form.
+
+y = mx + b
+
+The slope m is 3 and the y intercept b is -4.
+
+So the equation is y = 3x - 4.",,,,
+Functions and Slope,500,"A line passes through (1 2) and has slope 4. Find its equation in slope intercept form.","Use y = mx + b.
+
+The slope m = 4 so y = 4x + b.
+
+Substitute the point (1 2).
+2 = 4(1) + b
+2 = 4 + b
+
+Subtract 4.
+b = -2
+
+So the equation is y = 4x - 2.",,,,
 ,,,,,,,,
-Statistics & Data,100,"Find the mean of 6, 8, and 10","Mean = sum ÷ number of values.
-6 + 8 + 10 = 24
-24 ÷ 3 = 8.",,,,
-Statistics & Data,200,"Find the median of 4, 7, 9, and 13","Order the numbers.
-4, 7, 9, 13
-There are four numbers so average the middle two.
-(7 + 9) ÷ 2 = 8.",,,,
-Statistics & Data,300,"A data set includes 2, 5, 5, 6, and 9. What is the mode?","The mode is the number that appears most often.
-5 appears twice.
-The mode is 5.",,,,
-Statistics & Data,400,A bar graph shows 18 red votes 12 blue votes and 10 green votes. How many votes total?,"Add all the categories.
-18 + 12 + 10 = 40
-There are 40 total votes.",40Qbar-graph-votes.png,40Atotal-votes-addition.png,,,
-Statistics & Data,500,The average of 5 numbers is 12. What is the total of the numbers?,"Average = total ÷ number of values.
-Total = average × number.
-12 × 5 = 60
-The total of the numbers is 60.",,,,
+Exponents and Scientific Notation,100,"Evaluate 2^4 × 2^3.","When multiplying powers with the same base add the exponents.
+
+2^4 × 2^3 = 2^7
+
+2^7 = 128
+
+The value is 128.",,,,
+Exponents and Scientific Notation,200,"Evaluate (3^2)^3.","Use the power of a power rule.
+
+(3^2)^3 = 3^6
+
+3^6 = 729
+
+The value is 729.",,,,
+Exponents and Scientific Notation,300,"Write 0.00045 in scientific notation.","Move the decimal so the number is between 1 and 10.
+
+0.00045 becomes 4.5
+
+The decimal moved 4 places to the right so the exponent is negative 4.
+
+The answer is 4.5 × 10^-4.",,,,
+Exponents and Scientific Notation,400,"Write 6.2 × 10^5 in standard form.","A positive exponent of 5 means move the decimal 5 places to the right.
+
+6.2 becomes 620000
+
+The standard form is 620000.",,,,
+Exponents and Scientific Notation,500,"Simplify (2^3 × 2^5) ÷ 2^4.","First combine the powers in the numerator.
+
+2^3 × 2^5 = 2^8
+
+Now divide by 2^4.
+2^8 ÷ 2^4 = 2^4
+
+2^4 = 16
+
+The value is 16.",,,,
+,,,,,,,,
+Pythagorean Theorem and Geometry,100,"A right triangle has legs 6 and 8. Find the hypotenuse.","Use the Pythagorean theorem.
+
+6^2 + 8^2 = c^2
+36 + 64 = c^2
+100 = c^2
+
+c = 10
+
+The hypotenuse is 10.",,,,
+Pythagorean Theorem and Geometry,200,"Find the distance between (1 1) and (4 5).","Find the horizontal and vertical changes.
+
+4 - 1 = 3
+5 - 1 = 4
+
+Use the Pythagorean theorem.
+3^2 + 4^2 = 9 + 16 = 25
+
+The distance is √25 = 5.",,,,
+Pythagorean Theorem and Geometry,300,"A square has side length 10. Find the length of its diagonal.","The diagonal of a square forms a right triangle with legs 10 and 10.
+
+d^2 = 10^2 + 10^2
+d^2 = 100 + 100
+d^2 = 200
+
+d = √200
+d = 10√2
+
+The diagonal is 10√2.",,,,
+Pythagorean Theorem and Geometry,400,"A rectangular prism has length 5 width 4 and height 3. Find its volume.","Use the volume formula.
+
+Volume = length × width × height
+
+5 × 4 × 3 = 60
+
+The volume is 60 cubic units.",,,,
+Pythagorean Theorem and Geometry,500,"A ladder 13 feet long leans against a wall. The bottom of the ladder is 5 feet from the wall. How high up the wall does the ladder reach?","This forms a right triangle.
+
+The ladder is the hypotenuse so c = 13.
+The distance from the wall is one leg so a = 5.
+Let the height be b.
+
+Use the Pythagorean theorem.
+5^2 + b^2 = 13^2
+25 + b^2 = 169
+
+Subtract 25.
+b^2 = 144
+
+b = 12
+
+The ladder reaches 12 feet up the wall.",,,,

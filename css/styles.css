@@ -170,7 +170,7 @@ h1{
 
 .settingsActions{
   display:grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   gap:10px;
 }
 
@@ -363,6 +363,10 @@ main{
     padding:10px 12px;
   }
 
+  .scoreHeaderActions{
+    gap:6px;
+  }
+
   .scoreToggleBtn{
     display:inline-flex;
     margin-left:auto;
@@ -494,6 +498,20 @@ main{
   justify-content:space-between;
   gap:8px;
 }
+.scoreHeaderMain{
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+  min-width:0;
+}
+
+.scoreHeaderActions{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-left:auto;
+}
+
 .scoreToggleBtn{ display:none; }
 .scoreHeader h2{
   margin:0;
@@ -531,8 +549,62 @@ main{
   box-shadow: 0 12px 26px rgba(11,16,32,.08);
 }
 .team.selected{
-  border-color: var(--team-accent, #9ab0ff);
-  box-shadow: 0 0 0 3px rgba(36,58,239,.14) inset, 0 12px 26px rgba(11,16,32,.10);
+  border-color: color-mix(in srgb, var(--team-accent) 86%, #0f1d33);
+  border-width: 4px;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--team-accent) 20%, white), #fff 60%);
+  box-shadow:
+    0 0 0 2px #ffffff,
+    0 0 0 6px color-mix(in srgb, var(--team-accent) 45%, #0f1d33),
+    0 0 0 11px color-mix(in srgb, var(--team-accent) 20%, transparent),
+    0 18px 36px rgba(11,16,32,.18);
+}
+
+.team.selected::after{
+  content:"ACTIVE";
+  position:absolute;
+  top:-12px;
+  right:10px;
+  padding:2px 8px;
+  border-radius:999px;
+  font-size:10px;
+  letter-spacing:.7px;
+  font-weight:1000;
+  color:#fff;
+  background: color-mix(in srgb, var(--team-accent) 72%, #0f1d33);
+  border:1px solid color-mix(in srgb, var(--team-accent) 45%, #0f1d33);
+  box-shadow: 0 4px 12px rgba(11,16,32,.22);
+}
+
+.team.is-picking{
+  border-color: color-mix(in srgb, var(--team-accent) 92%, #0f1d33);
+  border-width: 4px;
+  box-shadow:
+    0 0 0 2px #ffffff,
+    0 0 0 7px color-mix(in srgb, var(--team-accent) 55%, #0f1d33),
+    0 0 30px color-mix(in srgb, var(--team-accent) 65%, transparent),
+    0 18px 34px rgba(11,16,32,.2);
+  animation: pickerPulse .18s ease-in-out infinite alternate;
+}
+
+.team.is-picking::after{
+  content:"PICKING";
+  position:absolute;
+  top:-12px;
+  right:10px;
+  padding:2px 8px;
+  border-radius:999px;
+  font-size:10px;
+  letter-spacing:.7px;
+  font-weight:1000;
+  color:#fff;
+  background: color-mix(in srgb, var(--team-accent) 78%, #0f1d33);
+  border:1px solid color-mix(in srgb, var(--team-accent) 58%, #0f1d33);
+  box-shadow: 0 5px 14px rgba(11,16,32,.24);
+}
+
+@keyframes pickerPulse{
+  from{ transform: translateY(0) scale(1); }
+  to{ transform: translateY(-1px) scale(1.008); }
 }
 
 .teamTop{ display:flex; flex-direction:column; gap:6px; min-width:0; }
@@ -679,6 +751,54 @@ main{
   min-width:86px;
   padding-left:10px;
   border-left:1px dashed color-mix(in srgb, var(--team-accent) 35%, var(--line));
+}
+
+.infoOverlay{
+  align-items:center;
+  justify-content:center;
+  padding:18px;
+}
+
+.infoModal{
+  width:min(760px, 100%);
+  height:auto;
+  max-height:min(84vh, 900px);
+  border-radius:24px;
+  background:#fff;
+  border:1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.infoModalBody{
+  display:block;
+  overflow:auto;
+  padding:18px;
+}
+
+.infoCard{
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:rgba(255,255,255,.9);
+  padding:18px 20px;
+  box-shadow: 0 12px 26px rgba(11,16,32,.06);
+}
+
+.infoCard p{
+  margin:0 0 14px;
+  font-size:15px;
+  line-height:1.5;
+}
+
+.infoList{
+  margin:0;
+  padding-left:20px;
+  color:var(--ink);
+  font-size:14px;
+  line-height:1.55;
+}
+
+.infoList li + li{
+  margin-top:8px;
 }
 
 .foot{
