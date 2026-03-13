@@ -316,7 +316,6 @@ const els = {
   correctBtn: document.getElementById("correctBtn"),
   incorrectBtn: document.getElementById("incorrectBtn"),
   imgWrap: document.getElementById("imgWrap"),
-  clueImg: document.getElementById("clueImg"),
 
   resetGameBtn: document.getElementById("resetGameBtn"),
   resetScoresBtn: document.getElementById("resetScoresBtn"),
@@ -883,6 +882,30 @@ function clueAt(c, r){
   return { cat, clue, value };
 }
 
+function renderClueImage(imageSrc){
+  if(!els.imgWrap) return;
+
+  const src = String(imageSrc ?? "").trim();
+  els.imgWrap.replaceChildren();
+
+  // Only create an image node when a clue actually provides a source.
+  if(!src){
+    els.imgWrap.style.display = "none";
+    return;
+  }
+
+  const img = document.createElement("img");
+  img.alt = "";
+  img.src = src;
+  img.addEventListener("error", () => {
+    els.imgWrap.replaceChildren();
+    els.imgWrap.style.display = "none";
+  }, { once: true });
+
+  els.imgWrap.appendChild(img);
+  els.imgWrap.style.display = "block";
+}
+
 function updateClueImageForPhase(){
   if(!state.lastClue) return;
   const { clue } = clueAt(state.lastClue.c, state.lastClue.r);
@@ -892,13 +915,7 @@ function updateClueImageForPhase(){
   const answerImage = String(clue.answer_image ?? "").trim();
   const imageToShow = state.showAnswer && answerImage ? answerImage : questionImage;
 
-  if(imageToShow){
-    els.imgWrap.style.display = "block";
-    els.clueImg.src = imageToShow;
-  }else{
-    els.imgWrap.style.display = "none";
-    els.clueImg.removeAttribute("src");
-  }
+  renderClueImage(imageToShow);
 }
 
 function openClue(c, r){
