@@ -204,5 +204,22 @@
 <audio id="jeopardyLoop" preload="auto" loop>
   <source src="assets/audio/jeopardyLoop.mp3" type="audio/mpeg">
 </audio>
+
+<!-- Victory audio -->
+<audio id="victoryAudio" preload="auto">
+  <source src="assets/audio/cute_happy_victory.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Victory Screen -->
+<div class="victoryOverlay" id="victoryOverlay" role="dialog" aria-modal="true" aria-labelledby="victoryTeamName" hidden>
+  <canvas id="confettiCanvas" class="confettiCanvas"></canvas>
+  <div class="victoryModal">
+    <div class="victoryEmoji">🏆</div>
+    <div class="victoryLabel">Winner!</div>
+    <div class="victoryTeamName" id="victoryTeamName">Team 1</div>
+    <div class="victoryScore" id="victoryScore">$0</div>
+    <button class="btn victoryCloseBtn" id="victoryCloseBtn" type="button">🎉 Close</button>
+  </div>
+</div>
 </body>
 </html>

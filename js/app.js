@@ -152,6 +152,123 @@ const SFX = {
   alarm: new Audio("assets/audio/alarm.mp3"),
 };
 
+/* ============================================================
+   CONFETTI
+   ============================================================ */
+const CONFETTI_COLORS = ['#ff4fb9','#56b7ff','#ffe34a','#47e08a','#ff9f2e','#ff3b4d','#a855f7','#ffffff'];
+let _confettiRafId = null;
+
+function startConfetti(canvas){
+  if(!canvas) return;
+  const ctx = canvas.getContext('2d');
+  canvas.width  = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  const count = 160;
+  const pieces = Array.from({length: count}, () => ({
+    x:     Math.random() * canvas.width,
+    y:     Math.random() * canvas.height - canvas.height,
+    w:     Math.random() * 11 + 6,
+    h:     Math.random() * 7  + 4,
+    color: CONFETTI_COLORS[Math.floor(Math.random() * CONFETTI_COLORS.length)],
+    speed: Math.random() * 3.5 + 1.5,
+    angle: Math.random() * Math.PI * 2,
+    spin:  (Math.random() - 0.5) * 0.14,
+    drift: (Math.random() - 0.5) * 1.8,
+  }));
+
+  function draw(){
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for(const p of pieces){
+      ctx.save();
+      ctx.translate(p.x, p.y);
+      ctx.rotate(p.angle);
+      ctx.fillStyle = p.color;
+      ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+      ctx.restore();
+      p.y     += p.speed;
+      p.x     += p.drift;
+      p.angle += p.spin;
+      if(p.y > canvas.height + 20){
+        p.y = -20;
+        p.x = Math.random() * canvas.width;
+      }
+    }
+    _confettiRafId = requestAnimationFrame(draw);
+  }
+  draw();
+}
+
+function stopConfetti(){
+  if(_confettiRafId){ cancelAnimationFrame(_confettiRafId); _confettiRafId = null; }
+  const canvas = document.getElementById('confettiCanvas');
+  if(canvas){ canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height); }
+}
+
+/* ============================================================
+   VICTORY SCREEN
+   ============================================================ */
+function getTotalClues(){
+  return BANK.categories.length * (BANK.values || []).length;
+}
+
+function getUsedClueCount(){
+  return Object.values(state.used).filter(Boolean).length;
+}
+
+function checkForWinner(){
+  const total = getTotalClues();
+  if(total === 0) return;
+  if(getUsedClueCount() < total) return;
+
+  const activeCount = clamp(state.teamCount, 1, TEAM_COLORS.length);
+  let winnerIndex = 0;
+  let highScore = -Infinity;
+  for(let i = 0; i < activeCount; i++){
+    if(state.teams[i].score > highScore){
+      highScore = state.teams[i].score;
+      winnerIndex = i;
+    }
+  }
+  showVictoryScreen(winnerIndex);
+}
+
+function showVictoryScreen(winnerIndex){
+  const overlay   = document.getElementById('victoryOverlay');
+  const nameEl    = document.getElementById('victoryTeamName');
+  const scoreEl   = document.getElementById('victoryScore');
+  const modal     = overlay?.querySelector('.victoryModal');
+  const canvas    = document.getElementById('confettiCanvas');
+  if(!overlay || !nameEl || !scoreEl) return;
+
+  const team  = state.teams[winnerIndex];
+  const color = getTeamColor(winnerIndex);
+
+  nameEl.textContent  = team.name;
+  scoreEl.textContent = `Final Score: $${Number(team.score).toLocaleString()}`;
+  if(modal) modal.style.setProperty('--team-accent', color);
+
+  overlay.hidden = false;
+
+  // play victory audio
+  const audio = document.getElementById('victoryAudio');
+  if(audio){
+    audio.currentTime = 0;
+    audio.play().catch(err => console.warn('Victory audio blocked:', err));
+  }
+
+  // start confetti
+  startConfetti(canvas);
+}
+
+function closeVictoryScreen(){
+  const overlay = document.getElementById('victoryOverlay');
+  if(overlay) overlay.hidden = true;
+  const audio = document.getElementById('victoryAudio');
+  if(audio){ audio.pause(); audio.currentTime = 0; }
+  stopConfetti();
+}
+
 SFX.correct.preload = "auto";
 SFX.incorrect.preload = "auto";
 SFX.alarm.preload = "auto";
@@ -1285,6 +1402,7 @@ els.closeBtn.addEventListener("click", closeClue);
 els.markUsedBtn.addEventListener("click", () => {
   markUsed();
   closeClue();
+  checkForWinner();
 });
 
 els.correctBtn.addEventListener("click", () => {
@@ -1292,6 +1410,7 @@ els.correctBtn.addEventListener("click", () => {
   markUsed();
   scoreTeam(currentValue());
   closeClue();
+  checkForWinner();
 });
 
 els.incorrectBtn.addEventListener("click", () => {
@@ -1299,6 +1418,7 @@ els.incorrectBtn.addEventListener("click", () => {
   markUsed();
   scoreTeam(-currentValue());
   closeClue();
+  checkForWinner();
 });
 
 els.resetScoresBtn.addEventListener("click", () => {
@@ -1322,6 +1442,7 @@ els.resetGameBtn.addEventListener("click", () => {
   renderBoard();
   renderScoreboard();
   closeClue();
+  closeVictoryScreen();
   setStatus("Game reset");
 });
 
@@ -1770,4 +1891,5 @@ async function init(){
 
   TimerManager.reset(sanitizeDefaultSeconds(state.defaultSeconds));
 }
+document.getElementById('victoryCloseBtn')?.addEventListener('click', closeVictoryScreen);
 init();
